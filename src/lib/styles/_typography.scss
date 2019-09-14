@@ -29,8 +29,10 @@ $font-sizes-display: (
 }
 
 // $font-size-lead imported from './variables.scss'
-.text--lead {
-    font-size: $font-size-lead;
+@each $size, $value in $font-sizes {
+    .text--#{$size} {
+        font-size: $value;
+    }
 }
 
 // map $font-families imported from './variables.scss

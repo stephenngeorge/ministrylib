@@ -38,6 +38,12 @@ $font-size-base:            1rem;
 $font-size-lead:            $font-size-base * 1.4;
 $font-size-small:           $font-size-base * .8;
 
+$font-sizes: (
+    "base": $font-size-base,
+    "lead": $font-size-lead,
+    "small": $font-size-small
+);
+
 /*  ******
 ----------
 COLOURS
