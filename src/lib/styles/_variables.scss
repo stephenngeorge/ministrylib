@@ -1,0 +1,67 @@
+/*  ******
+----------
+FONTS
+----------
+******  */
+// sans-serif
+@import url('https://fonts.googleapis.com/css?family=Assistant:300,400,700&display=swap');
+$font-family-sans-serif:    'Assistant', Arial, sans-serif;
+// serif
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap');
+$font-family-serif:         'Playfair Display', Courier, serif;
+// cursive
+@import url('https://fonts.googleapis.com/css?family=Lovers+Quarrel&display=swap');
+$font-family-cursive:       'Lovers Quarrel', cursive;
+
+$font-families: (
+    "sans-serif": $font-family-sans-serif,
+    "serif": $font-family-serif,
+    "cursive": $font-family-cursive
+);
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-heavy: 700;
+
+$font-weights: (
+    "light": $font-weight-light,
+    "normal": $font-weight-normal,
+    "heavy": $font-weight-heavy
+);
+
+/*  ******
+----------
+TYPOGRAPHY
+----------
+******  */
+$font-size-base:            1rem;
+$font-size-lead:            $font-size-base * 1.4;
+$font-size-small:           $font-size-base * .8;
+
+/*  ******
+----------
+COLOURS
+----------
+******  */
+$color--dark-grey:          #3E403F;
+$color--green:              #77ADA5;
+$color--white:              #ffffff;
+
+$theme-colors: (
+    "dark-grey": $color--dark-grey,
+    "green": $color--green,
+    "white": $color--white
+);
+
+/*  ******
+----------
+LAYOUT
+----------
+******  */
+
+// ------- ZINDEX
+
+$zindex-foreground: 500;
+$zindex-background: -500;
+
+$zindex-behind: -10;
