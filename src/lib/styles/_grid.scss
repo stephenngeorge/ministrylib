@@ -56,13 +56,17 @@
     margin-left: auto;
     margin-right: auto;
     overflow: auto;
+
+    display: flex;
 }
 
 .container {
-    padding: 0 1rem;
+    padding: 2rem 1rem;
     margin-left: auto;
     margin-right: auto;
     overflow: auto;
+
+    display: flex;
     
     @include set-columns(12);
     @include breakpoint("md") {
