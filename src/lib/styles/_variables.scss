@@ -65,6 +65,18 @@ LAYOUT
 ----------
 ******  */
 
+// ------- BREAKPOINTS
+
+$breakpoint-sm: 576px;
+$breakpoint-md: 767px;
+$breakpoint-lg: 992px;
+
+$breakpoints: (
+    "sm": $breakpoint-sm,
+    "md": $breakpoint-md,
+    "lg": $breakpoint-lg
+);
+
 // ------- ZINDEX
 
 $zindex-foreground: 500;

@@ -1,0 +1,86 @@
+/*
+ *  ----------
+ *  BREAKPOINTS
+ *  ----------
+*/
+@each $breakpoint, $pixels in $breakpoints {
+    @mixin breakpoint-#{$breakpoint} {
+        @media (min-width: $pixels) { @content; }
+    }
+}
+
+/*
+ *  ----------
+ *  GRID SYSTEM
+ *  ----------
+*/
+@for $i from 1 through 12 {
+    $value: (100% / 12) * $i;
+    %column-#{$i} {
+        width: $value;
+    }
+    .column-#{$i} {
+        @extend %column-#{$i};
+    }
+
+    %offset-#{$i} {
+        margin-left: $value;
+    }
+    .offset-#{$i} {
+        @extend %offset-#{$i};
+    }
+}
+
+
+@mixin set-columns($cols) {
+    @extend %column-#{$cols};
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+/*
+ *  ----------
+ *  CONTAINERS
+ *  ----------
+*/
+.container--full-width {
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.container {
+    @include set-columns(12);
+    @include breakpoint-md {
+        @include set-columns(10);
+    }
+}
+
+/*
+ *  ----------
+ *  SPACING
+ *  ----------
+*/
+.no-padding-x {
+    padding-left: 0;
+    padding-right: 0;
+}
+.no-padding-y {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.no-margin-x {
+    margin-left: 0;
+    margin-right: 0;
+}
+.no-margin-y {
+    margin-top: 0;
+    margin-bottom: 0;
+}
