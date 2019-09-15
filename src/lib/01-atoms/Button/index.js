@@ -39,7 +39,7 @@ const Button = ({
     }
     if (!!buttonBlock) buttonClasses.buttonBlock = 'button--block '
     if (!!buttonOutline) buttonClasses.buttonOutline = `button-outline--color-${buttonColor}`
-    // manipulate button_classes object into one string
+    // manipulate buttonClasses object into one string
     // that can be set as button.className
     let classes = ''
     Object.keys(buttonClasses).forEach(key => {

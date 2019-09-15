@@ -3,9 +3,9 @@
  *  BREAKPOINTS
  *  ----------
 */
-@each $breakpoint, $pixels in $breakpoints {
-    @mixin breakpoint-#{$breakpoint} {
-        @media (min-width: $pixels) { @content; }
+@mixin breakpoint($size) {
+    @media (min-width: map-get($breakpoints, $size)) {
+        @content;
     }
 }
 
@@ -33,7 +33,7 @@
 
 
 @mixin set-columns($cols) {
-    @extend %column-#{$cols};
+    width: (100% / 12) * $cols;
 }
 
 .column {
@@ -53,11 +53,16 @@
 .container--full-width {
     width: 100%;
     padding: 0 1rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .container {
+    margin-left: auto;
+    margin-right: auto;
+    
     @include set-columns(12);
-    @include breakpoint-md {
+    @include breakpoint("md") {
         @include set-columns(10);
     }
 }

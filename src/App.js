@@ -1,9 +1,9 @@
 import React from 'react'
 
-import { Title } from './lib'
+import { Container, Title } from './lib'
 
 export default () => (
-    <div>
+    <Container>
         <Title headingText="Test" headingLevel={1} />
-    </div>
+    </Container>
 )
