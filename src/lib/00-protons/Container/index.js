@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 
 import defaults from './defaults'
 
+import './container.scss'
+
 const Container = ({
     additionalClasses,
     backgroundColor,
@@ -18,7 +20,7 @@ const Container = ({
     // set classes based on props
     const containerClasses = {
         baseClasses: additionalClasses.join(' '),
-        bgColor: `color--${backgroundColor} `
+        bgColor: `bg--${backgroundColor} `
     }
     if (!padding) containerClasses.padding = 'no-padding-x '
     containerClasses.full_width = !!full_width ? 'container--full-width ' : 'container '
@@ -28,7 +30,7 @@ const Container = ({
     Object.keys(containerClasses).forEach(key => {
         classes += containerClasses[key]
     })
-    console.log(classes)
+
     return (
         <div className={classes}>
             { children }

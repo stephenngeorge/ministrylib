@@ -16,18 +16,18 @@
 */
 @for $i from 1 through 12 {
     $value: (100% / 12) * $i;
-    %column-#{$i} {
+    %column-span-#{$i} {
         width: $value;
     }
-    .column-#{$i} {
-        @extend %column-#{$i};
+    .column-span-#{$i} {
+        @extend %column-span-#{$i};
     }
 
-    %offset-#{$i} {
+    %offset-span-#{$i} {
         margin-left: $value;
     }
-    .offset-#{$i} {
-        @extend %offset-#{$i};
+    .offset-span-#{$i} {
+        @extend %offset-span-#{$i};
     }
 }
 
@@ -55,11 +55,14 @@
     padding: 0 1rem;
     margin-left: auto;
     margin-right: auto;
+    overflow: auto;
 }
 
 .container {
+    padding: 0 1rem;
     margin-left: auto;
     margin-right: auto;
+    overflow: auto;
     
     @include set-columns(12);
     @include breakpoint("md") {
