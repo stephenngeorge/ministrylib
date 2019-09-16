@@ -16,11 +16,12 @@
 */
 @for $i from 1 through 12 {
     $value: (100% / 12) * $i;
-    %column-span-#{$i} {
+    %grid-span-#{$i} {
         width: $value;
+        flex-basis: $value;
     }
-    .column-span-#{$i} {
-        @extend %column-span-#{$i};
+    .grid-span-#{$i} {
+        @extend %grid-span-#{$i};
     }
 
     %offset-span-#{$i} {
@@ -32,7 +33,7 @@
 }
 
 
-@mixin set-columns($cols) {
+@mixin set-grid-span($cols) {
     width: (100% / 12) * $cols;
 }
 
@@ -58,6 +59,7 @@
     overflow: auto;
 
     display: flex;
+    flex-wrap: wrap;
 }
 
 .container {
@@ -67,10 +69,11 @@
     overflow: auto;
 
     display: flex;
+    flex-wrap: wrap;
     
-    @include set-columns(12);
+    @include set-grid-span(12);
     @include breakpoint("md") {
-        @include set-columns(10);
+        @include set-grid-span(10);
     }
 }
 
