@@ -14,9 +14,7 @@ import PropTypes from 'prop-types'
 
 import defaults from './defaults'
 
-import './hero-image.scss'
-
-import { CoverImage } from '../../00-atoms'
+import { CoverImage } from '../../01-atoms'
 
 const HeroImage = ({
     additionalClasses,

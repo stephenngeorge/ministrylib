@@ -27,19 +27,19 @@
 
 // generate button color and outline classes
 @each $color, $hex in $theme-colors {
-    .button--color-#{$color} {
+    %button--color-#{$color} {
         background-color: $hex;
-        @if (lightness($hex) > 50%) {
-            color: $color--dark-grey;
-        }
-        @else {
-            color: $color--white;
-        }
+    }
+    .button--color-#{$color} {
+        @extend %button--color-#{$color};
     }
 
-    .button-outline--color-#{$color} {
+    %button-outline--color-#{$color} {
         border: 2px solid $hex;
         color: $hex !important;
-        background-color: $color--white !important;
+        background: none;
+    }
+    .button-outline--color-#{$color} {
+        @extend %button-outline--color-#{$color};
     }
 }

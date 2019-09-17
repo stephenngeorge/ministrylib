@@ -1,5 +1,14 @@
 /*  ******
 ----------
+STRUCTURE
+----------
+******  */
+section, div {
+    overflow: auto;
+}
+
+/*  ******
+----------
 HEADINGS
 ----------
 ******  */
@@ -25,4 +34,10 @@ OTHER TEXT
 p {
     font-size: $font-size-base;
     font-family: $font-family-serif;
+
+    margin-bottom: 1rem;
+}
+
+a {
+    display: inline-block;
 }

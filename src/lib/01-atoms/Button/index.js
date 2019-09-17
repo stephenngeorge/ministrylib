@@ -13,8 +13,6 @@ import PropTypes from 'prop-types'
 
 import defaults from './defaults'
 
-import './button.scss'
-
 const Button = ({
     additionalClasses,
     buttonBlock,

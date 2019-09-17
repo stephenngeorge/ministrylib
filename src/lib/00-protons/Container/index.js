@@ -3,14 +3,12 @@ import PropTypes from 'prop-types'
 
 import defaults from './defaults'
 
-import './container.scss'
-
 const Container = ({
     additionalClasses,
     backgroundColor,
     children,
     padding,
-    full_width
+    fullWidth
 }) => {
     // warn about defaults
     if (defaults.backgroundColor.range.indexOf(backgroundColor) < 0) {
@@ -23,7 +21,7 @@ const Container = ({
         bgColor: `bg--${backgroundColor} `
     }
     if (!padding) containerClasses.padding = 'no-padding-x '
-    containerClasses.full_width = !!full_width ? 'container--full-width ' : 'container '
+    containerClasses.fullWidth = !!fullWidth ? 'container--full-width ' : 'container '
     // manipulate containerClasses object into one string
     // that can be set as container.className
     let classes = ''
@@ -42,14 +40,14 @@ Container.propTypes = {
     additionalClasses: PropTypes.array,
     backgroundColor: PropTypes.string,
     padding: PropTypes.bool,
-    full_width: PropTypes.bool
+    fullWidth: PropTypes.bool
 }
 
 Container.defaultProps = {
     additionalClasses: defaults.additionalClasses.value,
     backgroundColor: defaults.backgroundColor.value,
     padding: defaults.padding.value,
-    full_width: defaults.full_width.value
+    fullWidth: defaults.fullWidth.value
 }
 
 export default Container

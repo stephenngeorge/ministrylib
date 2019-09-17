@@ -1,0 +1,31 @@
+.call-to-action {
+  display: flex;
+  justify-content: center;
+
+  @include breakpoint("sm") {
+    .column {
+      max-width: 22rem;
+      margin: 0 auto;
+    }
+  }
+
+  &__text-content {
+    padding: 0 1rem;
+
+    p {
+      color: $color--white;
+      font-size: $font-size-lead;
+      text-align: center;
+    }
+  }
+
+  &__button-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+
+    .button {
+      text-transform: uppercase;
+    }
+  }
+}

@@ -13,9 +13,8 @@ import PropTypes from 'prop-types'
 
 import defaults from './defaults'
 
-import './call-to-action.scss'
-
-import { Button, PlainText, Title } from '../../00-atoms'
+import { Column, Container } from '../../00-protons'
+import { Button, PlainText, Title } from '../../01-atoms'
 
 const CallToAction = ({
     additionalClasses,
@@ -35,27 +34,33 @@ const CallToAction = ({
 
     return (
         <section className={`call-to-action ${additionalClasses.join(' ')}`}>
-            <div className="call-to-action__text-content">
-                {
-                    headingText !== defaults.headingText.value &&
-                    <Title  headingId={ headingId }
-                            headingLevel={ headingLevel }
-                            headingText={ headingText }
-                    />
-                }
-                <PlainText  paragraphId={ paragraphId }
-                            text={ paragraphText }
-                />
-            </div>
+            <Container fullWidth={true} backgroundColor="green">
+                <Column span={12}>
+                    <div className="call-to-action__text-content">
+                        {
+                            headingText !== defaults.headingText.value &&
+                            <Title  headingId={ headingId }
+                                    headingLevel={ headingLevel }
+                                    headingText={ headingText }
+                            />
+                        }
+                        <PlainText  paragraphId={ paragraphId }
+                                    text={ paragraphText }
+                        />
+                    </div>
 
-            <div className="call-to-action__button-container">
-                <Button buttonColor={ buttonColor }
-                        buttonText={ buttonText }
-                        buttonElement={ buttonElement }
-                        buttonLink={ buttonLink }
-                        buttonOnClick={ buttonOnClick }
-                />
-            </div>
+                    <div className="call-to-action__button-container">
+                        <Button buttonColor={ buttonColor }
+                                buttonText={ buttonText }
+                                buttonElement={ buttonElement }
+                                buttonLink={ buttonLink }
+                                buttonOnClick={ buttonOnClick }
+                                buttonOutline={ true }
+                                buttonSize="large"
+                        />
+                    </div>
+                </Column>
+            </Container>
         </section>
     )
 }

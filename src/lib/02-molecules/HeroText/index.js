@@ -10,11 +10,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import './hero-text.scss'
-
 import defaults from './defaults'
 
-import { Title, PlainText } from '../../00-atoms'
+import { Title, PlainText } from '../../01-atoms'
 
 const HeroText = ({
     additionalClasses,

@@ -1,16 +1,5 @@
 /*
  *  ----------
- *  BREAKPOINTS
- *  ----------
-*/
-@mixin breakpoint($size) {
-    @media (min-width: map-get($breakpoints, $size)) {
-        @content;
-    }
-}
-
-/*
- *  ----------
  *  GRID SYSTEM
  *  ----------
 */
@@ -32,11 +21,6 @@
     }
 }
 
-
-@mixin set-grid-span($cols) {
-    width: (100% / 12) * $cols;
-}
-
 .column {
     display: flex;
     flex-direction: column;
@@ -53,7 +37,7 @@
 */
 .container--full-width {
     width: 100%;
-    padding: 0 1rem;
+    padding: 2rem 1rem;
     margin-left: auto;
     margin-right: auto;
     overflow: auto;

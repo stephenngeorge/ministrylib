@@ -14,8 +14,6 @@ import PropTypes from 'prop-types'
 
 import defaults from './defaults'
 
-import './cover-image.scss'
-
 const CoverImage = ({
     additionalClasses,
     altText,

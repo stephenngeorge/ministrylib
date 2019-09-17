@@ -10,7 +10,7 @@ const defaults = {
     padding: {
         value: true
     },
-    full_width: {
+    fullWidth: {
         value: false
     }
 }
