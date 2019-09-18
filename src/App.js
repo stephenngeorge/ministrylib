@@ -3,11 +3,11 @@ import React from 'react'
 import { CallToAction } from './lib'
 
 export default () => (
-    <CallToAction   paragraphText="Find out more, enquire about booking a course"
+    <CallToAction   paragraphText="Enquire about booking a course, find out more about Rowena and Esther Ministry"
                     backgroundColor="main"
                     buttonLink="#"
                     buttonText="Get in touch"
                     buttonColor="dark"
-                    headingText="Lorem ipsum"
+                    headingText="Find out more"
     />
 )
