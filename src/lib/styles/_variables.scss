@@ -49,14 +49,18 @@ $font-sizes: (
 COLOURS
 ----------
 ******  */
-$color--dark-grey:          #3E403F !default;
-$color--green:              #77ADA5 !default;
-$color--white:              #ffffff !default;
+$color--main:           #77ADA5 !default;
+$color--complementary:  #AD777F !default;
+$color--secondary:      #779AAD !default;
+$color--dark:           #3E403F !default;
+$color--light:          #FFFFFF !default;
 
 $theme-colors: (
-    "dark-grey": $color--dark-grey,
-    "green": $color--green,
-    "white": $color--white
+    "main": $color--main,
+    "complementary": $color--complementary,
+    "secondary": $color--secondary,
+    "dark": $color--dark,
+    "light": $color--light
 ) !default;
 
 /*  ******

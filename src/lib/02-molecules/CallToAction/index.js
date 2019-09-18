@@ -18,6 +18,7 @@ import { Button, PlainText, Title } from '../../01-atoms'
 
 const CallToAction = ({
     additionalClasses,
+    backgroundColor,
     buttonColor,
     buttonElement,
     buttonLink,
@@ -34,12 +35,13 @@ const CallToAction = ({
 
     return (
         <section className={`call-to-action ${additionalClasses.join(' ')}`}>
-            <Container fullWidth={true} backgroundColor="green">
+            <Container fullWidth={true} backgroundColor={backgroundColor}>
                 <Column span={12}>
                     <div className="call-to-action__text-content">
                         {
                             headingText !== defaults.headingText.value &&
-                            <Title  headingId={ headingId }
+                            <Title  additionalClasses={[`color--${buttonColor}`]}
+                                    headingId={ headingId }
                                     headingLevel={ headingLevel }
                                     headingText={ headingText }
                             />
@@ -73,6 +75,7 @@ const CallToAction = ({
  */
 CallToAction.propTypes = {
     additionalClasses: PropTypes.array,
+    backgroundColor: PropTypes.string,
     buttonColor: PropTypes.string,
     buttonElement: PropTypes.string,
     buttonLink: PropTypes.string,

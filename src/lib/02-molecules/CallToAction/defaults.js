@@ -2,6 +2,9 @@ const defaults = {
     additionalClasses: {
         value: []
     },
+    backgroundColor: {
+        value: 'main'
+    },
     buttonColor: {
         value: 'white'
     },

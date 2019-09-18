@@ -12,8 +12,12 @@
   &__text-content {
     padding: 0 1rem;
 
+    h2 {
+      text-align: center;
+    }
+
     p {
-      color: $color--white;
+      color: $color--light;
       font-size: $font-size-lead;
       text-align: center;
     }
@@ -26,6 +30,12 @@
 
     .button {
       text-transform: uppercase;
+      transition: color .3s, background-color .3s;
+
+      &:hover {
+        background-color: $color--dark;
+        color: $color--main;
+      }
     }
   }
 }

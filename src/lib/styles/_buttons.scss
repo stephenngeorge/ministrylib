@@ -6,7 +6,7 @@
     font-family: $font-family-sans-serif;
 
     border-radius: 999px;
-    border: 2px solid $color--dark-grey;
+    border: 2px solid $color--secondary;
 }
 
 // define button sizes
@@ -36,7 +36,7 @@
 
     %button-outline--color-#{$color} {
         border: 2px solid $hex;
-        color: $hex !important;
+        color: $hex;
         background: none;
     }
     .button-outline--color-#{$color} {
