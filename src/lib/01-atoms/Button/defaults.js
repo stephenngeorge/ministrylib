@@ -6,7 +6,9 @@ const defaults = {
         value: false
     },
     buttonColor: {
-        value: 'white'
+        value: 'light',
+        range: ['main', 'complementary', 'secondary', 'light', 'dark'],
+        warning: 'You have passed an invalid colour to the "buttonColor" prop, please pass one of "main", "complementary", "secondary", "light", "dark"'
     },
     buttonElement: {
         value: 'button'

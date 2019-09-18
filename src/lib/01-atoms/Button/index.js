@@ -29,6 +29,10 @@ const Button = ({
     if (defaults.buttonSize.range.indexOf(buttonSize.toLowerCase().trim()) < 0) {
         console.warn(defaults.buttonSize.warning)
     }
+    if (defaults.buttonColor.range.indexOf(buttonColor) < 0) {
+        console.warn(defaults.buttonColor.warning)
+    }
+
     // set button classes based on props
     const buttonClasses = {
         baseClasses: `button ${additionalClasses.join(' ')} `,
