@@ -4,7 +4,7 @@ const defaults = {
     },
     backgroundColor: {
         value: 'light',
-        range: ['main', 'secondary', 'light'],
+        range: ['main', 'complementary', 'secondary', 'light', 'dark'],
         warning: "You passed a value that isn't a theme colour, please pass one of 'dark-grey', 'green' or 'white' to the 'backgroundColor' prop"
     },
     padding: {
