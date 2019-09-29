@@ -7,7 +7,8 @@ export default () => (
                     backgroundColor="main"
                     buttonLink="#"
                     buttonText="Get in touch"
-                    buttonColor="dark"
+                    buttonColor="complementary"
+                    buttonOutline="dark"
                     headingText="Find out more"
     />
 )

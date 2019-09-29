@@ -14,7 +14,7 @@ import PropTypes from 'prop-types'
 import defaults from './defaults'
 
 import { Column, Container } from '../../00-protons'
-import { Button, PlainText, Title } from '../../01-atoms'
+import { Button, PlainText, Title, TextLink } from '../../01-atoms'
 
 const CallToAction = ({
     additionalClasses,
@@ -23,6 +23,7 @@ const CallToAction = ({
     buttonElement,
     buttonLink,
     buttonOnClick,
+    buttonOutline,
     buttonText,
     headingId,
     headingLevel,
@@ -40,7 +41,7 @@ const CallToAction = ({
                     <div className="call-to-action__text-content">
                         {
                             headingText !== defaults.headingText.value &&
-                            <Title  additionalClasses={[`color--${buttonColor}`]}
+                            <Title  additionalClasses={[`color--dark`]}
                                     headingId={ headingId }
                                     headingLevel={ headingLevel }
                                     headingText={ headingText }
@@ -57,9 +58,10 @@ const CallToAction = ({
                                 buttonElement={ buttonElement }
                                 buttonLink={ buttonLink }
                                 buttonOnClick={ buttonOnClick }
-                                buttonOutline={ true }
+                                buttonOutline={ buttonOutline }
                                 buttonSize="large"
                         />
+                        <TextLink linkText="test" linkUrl="https://google.co.uk" />
                     </div>
                 </Column>
             </Container>
@@ -70,7 +72,6 @@ const CallToAction = ({
 /**
  * Button props:
  *      - buttonBlock: left to Button default
- *      - buttonOutline: left to Button default
  *      - buttonSize: passed down as 'large' by force
  */
 CallToAction.propTypes = {
@@ -80,6 +81,7 @@ CallToAction.propTypes = {
     buttonElement: PropTypes.string,
     buttonLink: PropTypes.string,
     buttonOnClick: PropTypes.func,
+    buttonOutline: PropTypes.string,
     buttonText: PropTypes.string.isRequired,
     headingId: PropTypes.string,
     headingLevel: PropTypes.number,
@@ -92,6 +94,7 @@ CallToAction.defaultProps = {
     additionalClasses: defaults.additionalClasses.value,
     buttonColor: defaults.buttonColor.value,
     buttonElement: defaults.buttonElement.value,
+    buttonOutline: defaults.buttonOutline.value,
     headingId: defaults.headingId.value,
     headingLevel: defaults.headingLevel.value,
     headingText: defaults.headingText.value,

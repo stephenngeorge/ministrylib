@@ -29,8 +29,11 @@ const Button = ({
     if (defaults.buttonSize.range.indexOf(buttonSize.toLowerCase().trim()) < 0) {
         console.warn(defaults.buttonSize.warning)
     }
-    if (defaults.buttonColor.range.indexOf(buttonColor) < 0) {
+    if (defaults.buttonColor.range.indexOf(buttonColor.toLowerCase().trim()) < 0) {
         console.warn(defaults.buttonColor.warning)
+    }
+    if (defaults.buttonOutline.range.indexOf(buttonOutline) < 0) {
+        console.warn(defaults.buttonOutline.warning)
     }
 
     // set button classes based on props
@@ -40,7 +43,7 @@ const Button = ({
         buttonSize: `button--size-${buttonSize} `
     }
     if (!!buttonBlock) buttonClasses.buttonBlock = 'button--block '
-    if (!!buttonOutline) buttonClasses.buttonOutline = `button-outline--color-${buttonColor}`
+    if (!!buttonOutline) buttonClasses.buttonOutline = `button-outline--color-${buttonOutline}`
     // manipulate buttonClasses object into one string
     // that can be set as button.className
     let classes = ''
@@ -82,7 +85,7 @@ Button.propTypes = {
     buttonId: PropTypes.string,
     buttonLink: PropTypes.string,
     buttonOnClick: PropTypes.func,
-    buttonOutline: PropTypes.bool,
+    buttonOutline: PropTypes.string,
     buttonSize: PropTypes.string,
     buttonText: PropTypes.string.isRequired
 }

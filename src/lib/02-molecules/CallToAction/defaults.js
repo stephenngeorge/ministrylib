@@ -12,6 +12,9 @@ const defaults = {
         value: 'a',
         warning: 'Call to action button is intended to be used with as an "a" tag, are you sure you want to use a different element?'
     },
+    buttonOutline: {
+        value: 'light'
+    },
     headingId: {
         value: ''
     },
