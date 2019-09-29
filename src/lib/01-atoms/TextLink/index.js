@@ -1,9 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
 import defaults from './defaults'
 
 const TextLink = ({
+    additionalClasses,
     linkText,
     linkUrl,
     variation
@@ -11,24 +13,31 @@ const TextLink = ({
     // warn about defaults
     if (defaults.variation.range.indexOf(variation) < 0) console.warn(defaults.variation.warning)
 
-    // const internalLink = (
-
-    // )
+    const internalLink = (
+        <Link to={linkUrl} className={ `text-link ${additionalClasses.join(' ')}` }>
+            { linkText }
+        </Link>
+    )
 
     const externalLink = (
-        <a href={linkUrl}>{ linkText }</a>
+        <a href={linkUrl} className={ `text-link ${additionalClasses.join(' ')}` }>
+            { linkText }
+        </a>
     )
-    return externalLink
+
+    return variation === 'internal' ? internalLink : externalLink
 }
 
 TextLink.propTypes = {
+    additionalClasses: PropTypes.array,
     linkText: PropTypes.string.isRequired,
     linkUrl: PropTypes.string.isRequired,
     variation: PropTypes.string
 }
 
 TextLink.defaultProps = {
-
+    additionalClasses: defaults.additionalClasses.value,
+    variation: defaults.variation.value
 }
 
 export default TextLink

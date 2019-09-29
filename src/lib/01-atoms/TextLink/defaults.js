@@ -1,4 +1,7 @@
 const defaults = {
+    additionalClasses: {
+        value: []
+    },
     variation: {
         value: 'internal',
         range: ['internal', 'external'],

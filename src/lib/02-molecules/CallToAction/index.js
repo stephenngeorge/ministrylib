@@ -14,7 +14,7 @@ import PropTypes from 'prop-types'
 import defaults from './defaults'
 
 import { Column, Container } from '../../00-protons'
-import { Button, PlainText, Title, TextLink } from '../../01-atoms'
+import { Button, PlainText, Title } from '../../01-atoms'
 
 const CallToAction = ({
     additionalClasses,
@@ -61,7 +61,6 @@ const CallToAction = ({
                                 buttonOutline={ buttonOutline }
                                 buttonSize="large"
                         />
-                        <TextLink linkText="test" linkUrl="https://google.co.uk" />
                     </div>
                 </Column>
             </Container>
