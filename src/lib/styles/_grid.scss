@@ -4,30 +4,30 @@
  *  ----------
 */
 @for $i from 1 through 12 {
-    $value: (100% / 12) * $i;
-    %grid-span-#{$i} {
-        width: $value;
-        flex-basis: $value;
-    }
-    .grid-span-#{$i} {
-        @extend %grid-span-#{$i};
-    }
+  $value: (100% / 12) * $i;
+  %grid-span-#{$i} {
+    width: $value;
+    flex-basis: $value;
+  }
+  .grid-span-#{$i} {
+    @extend %grid-span-#{$i};
+  }
 
-    %offset-span-#{$i} {
-        margin-left: $value;
-    }
-    .offset-span-#{$i} {
-        @extend %offset-span-#{$i};
-    }
+  %offset-span-#{$i} {
+    margin-left: $value;
+  }
+  .offset-span-#{$i} {
+    @extend %offset-span-#{$i};
+  }
 }
 
 .column {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 .row {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 /*
@@ -36,29 +36,29 @@
  *  ----------
 */
 .container--full-width {
-    width: 100%;
-    padding: 2rem 1rem;
-    margin-left: auto;
-    margin-right: auto;
-    overflow: auto;
+  width: 100%;
+  padding: 2rem 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: auto;
 
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .container {
-    padding: 2rem 1rem;
-    margin-left: auto;
-    margin-right: auto;
-    overflow: auto;
+  padding: 2rem 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: auto;
 
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
     
-    @include set-grid-span(12);
-    @include breakpoint("md") {
-        @include set-grid-span(10);
-    }
+  @include set-grid-span(12);
+  @include breakpoint("md") {
+    @include set-grid-span(10);
+  }
 }
 
 /*
@@ -67,19 +67,19 @@
  *  ----------
 */
 .no-padding-x {
-    padding-left: 0;
-    padding-right: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 .no-padding-y {
-    padding-top: 0;
-    padding-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .no-margin-x {
-    margin-left: 0;
-    margin-right: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 .no-margin-y {
-    margin-top: 0;
-    margin-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }

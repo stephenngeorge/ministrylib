@@ -4,7 +4,7 @@ STRUCTURE
 ----------
 ******  */
 section, div {
-    overflow: auto;
+  overflow: auto;
 }
 
 /*  ******
@@ -14,15 +14,15 @@ HEADINGS
 ******  */
 // map $font-sizes-headings imported from './typography.scss'
 @each $tag, $size in $font-sizes-headings {
-    #{$tag} {
-        font-size: $size;
-    }
+  #{$tag} {
+    font-size: $size;
+  }
 }
 // $font-familt-serif imported from './variables.scss'
 h1, h2,
 h3, h4,
 h5, h6 {
-    font-family: $font-family-serif;
+  font-family: $font-family-serif;
 }
 
 /*  ******
@@ -32,10 +32,10 @@ OTHER TEXT
 ******  */
 // $font-size-base, $font-family-sans-serif imported from './variables.scss'
 p {
-    font-size: $font-size-base;
-    font-family: $font-family-sans-serif;
+  font-size: $font-size-base;
+  font-family: $font-family-sans-serif;
 }
 
 a {
-    display: inline-block;
+  display: inline-block;
 }
