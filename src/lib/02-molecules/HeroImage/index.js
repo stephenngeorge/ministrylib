@@ -9,7 +9,7 @@
  * 
  */
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 
 import defaults from './defaults'
@@ -19,11 +19,40 @@ import { CoverImage } from '../../01-atoms'
 const HeroImage = ({
     additionalClasses,
     altText,
+    animate,
     divHeight,
     imageUrl
 }) => {
+    const [scroll, setScroll] = useState(0)
+
+    useEffect(() => {
+        const image = document.querySelector('#hero-image')
+        if (image !== null) {
+            image.style.transform = "scale(1.4, 1.4)"
+            image.style.filter = "saturate(100%)"
+        }
+    }, [])
+
+    useEffect(() => {
+        const animateImageScale = () => {
+            const image = document.querySelector('#hero-image')
+            if (window.scrollY > scroll) {
+                // access the transform style of hero-image
+                let scaler = (140 - scroll / 8) / 100
+                if (scaler <= 1) scaler = 1
+
+                let saturation = 100 - scroll
+                image.style.transform = `scale(${scaler}, ${scaler})`
+                image.style.filter = `saturate(${saturation}%)`
+                setScroll(window.scrollY)
+            }
+        }
+        document.addEventListener('scroll', animateImageScale)
+    }, [scroll])
+
     // warn about defaults
     if (divHeight === defaults.divHeight.value) console.warn(defaults.divHeight.warning)
+    if (defaults.animate.range.indexOf(animate) < 0) console.warn(defaults.animate.warning)
 
     const divStyles = {
         height: `${ divHeight.toString() }vh`
@@ -35,6 +64,7 @@ const HeroImage = ({
         >
             <CoverImage altText={ altText }
                         imageUrl={ imageUrl }
+                        imageId="hero-image"
             />
         </div>
     )
@@ -43,12 +73,14 @@ const HeroImage = ({
 HeroImage.propTypes = {
     additionalClasses: PropTypes.array,
     altText: PropTypes.string,
+    animate: PropTypes.string,
     divHeight: PropTypes.number,
     imageUrl: PropTypes.string.isRequired
 }
 
 HeroImage.defaultProps = {
     additionalClasses: defaults.additionalClasses.value,
+    animate: defaults.animate.value,
     divHeight: defaults.divHeight.value
 }
 
