@@ -12,6 +12,7 @@ export default () => (
                         divHeight={70}
                         additionalClasses={['animate']}
                         altText="rowena portrait"
+                        animate="onScroll"
         />
         <CallToAction   paragraphText="Enquire about booking a course, find out more about Rowena and Esther Ministry"
                         backgroundColor="main"
