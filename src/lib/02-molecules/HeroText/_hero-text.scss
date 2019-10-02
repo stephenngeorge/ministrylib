@@ -1,12 +1,10 @@
 .hero-textBlock {
   .content {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    .title {
-      height: 5rem;
-      position: absolute;
-      top: -5rem;
+    margin: 0 auto;
+    @include set-grid-span(10);
+
+    @include breakpoint("md") {
+      @include set-grid-span(8);
     }
   }
 }

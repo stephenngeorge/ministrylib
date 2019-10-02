@@ -23,9 +23,7 @@ const CoverImage = ({
     // warn about defaults
     if (altText === defaults.altText.value) console.warn(defaults.altText.warning)
     return (
-        <div className={`
-            cover-image cover-image__image-container ${additionalClasses.join(' ')}
-        `}>
+        <div className={`cover-image cover-image__image-container ${additionalClasses.join(' ')}`}>
             <img    src={ imageUrl }
                     alt={ altText }
                     id={ imageId }

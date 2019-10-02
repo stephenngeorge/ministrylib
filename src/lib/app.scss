@@ -19,3 +19,9 @@
 @import './styles/typography';
 @import './styles/framework';
 @import './styles/base';
+
+#intro-text {
+  padding: 2rem 0;
+  font-weight: $font-weight-light;
+  font-size: $font-size-lead;
+}

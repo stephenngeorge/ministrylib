@@ -17,7 +17,7 @@ const PlainText = ({
     text
 }) => {
     return (
-        <p  className={ additionalClasses.join(' ') }
+        <p  className={`plain-text ${additionalClasses.join(' ')}`}
             id={ paragraphId }
         >
             { text }

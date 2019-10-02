@@ -17,8 +17,8 @@ $font-sizes-headings: (
 }
 
 $font-sizes-display: (
-  "site-title": $font-size-base * 4,
-  "page-title": $font-size-base * 3
+  "site-title": $font-size-base * 3,
+  "page-title": $font-size-base * 2.4
 ) !default;
 // use map $font-sizes-display to generate classes that can 
 // force font size changes on any element
