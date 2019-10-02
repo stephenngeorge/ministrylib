@@ -17,3 +17,15 @@
 @mixin set-grid-span($cols) {
   width: (100% / 12) * $cols;
 }
+
+/*
+ *  ----------
+ *  TYPOGRAPHY
+ *  ----------
+*/
+@mixin padded-text($color, $padding-x, $padding-y) {
+  display: inline-block;
+  background-color: $color;
+  padding: #{$padding-x}rem #{$padding-y}rem;
+  box-decoration-break: clone;
+}

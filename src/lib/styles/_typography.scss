@@ -48,3 +48,13 @@ $font-sizes-display: (
     font-weight: $value;
   }
 }
+
+@each $color, $hex in $theme-colors {
+  .title__padded-text--#{$color} {
+    @include padded-text($hex, .6, 1);
+  }
+
+  .body__padded-text--#{$color} {
+    @include padded-text($hex, .4, .8);
+  }
+}

@@ -1,3 +1,13 @@
+/**
+ * TEXTLINK
+ * 
+ * TextLink components display an anchor tag and render either 
+ * a <Link> (from the react-router-dom library) or a regular 
+ * <a> depending on whether an internal or external resources 
+ * is referenced.
+ * 
+ */
+
 import React from 'react'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'

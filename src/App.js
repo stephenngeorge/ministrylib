@@ -20,9 +20,12 @@ export default () => (
                         buttonText="Get in touch"
                         buttonColor="complementary"
                         buttonOutline="dark"
-                        headingText="Find out more"
+                        headingText="Find out more this is a long title"
         />
-        <TextLink linkText="click me" linkUrl="/" variation="internal" />
+        <TextLink       linkText="click me"
+                        linkUrl="/"
+                        variation="internal"
+        />
     </Router>
     </div>
 )

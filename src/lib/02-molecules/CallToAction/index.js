@@ -4,8 +4,6 @@
  * CallToAction components are full-width blocks 
  * that contain a title, a body of text and a button
  * 
- * @todo setup props to be passed to BUTTON component
- * 
  */
 
 import React from 'react'
@@ -41,7 +39,7 @@ const CallToAction = ({
                     <div className="call-to-action__text-content">
                         {
                             headingText !== defaults.headingText.value &&
-                            <Title  additionalClasses={[`color--dark`]}
+                            <Title  additionalClasses={[`color--dark`, 'title__padded-text--complementary']}
                                     headingId={ headingId }
                                     headingLevel={ headingLevel }
                                     headingText={ headingText }

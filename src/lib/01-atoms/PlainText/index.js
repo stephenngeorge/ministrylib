@@ -2,7 +2,7 @@
  * PLAIN TEXT
  * 
  * PlainText component displays a simple paragraph 
- * of text
+ * of text.
  * 
  */
 
