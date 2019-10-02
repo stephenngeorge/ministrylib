@@ -39,7 +39,7 @@ const CallToAction = ({
                     <div className="call-to-action__text-content">
                         {
                             headingText !== defaults.headingText.value &&
-                            <Title  additionalClasses={[`color--dark`, 'title__padded-text--complementary']}
+                            <Title  additionalClasses={[`color--dark`]}
                                     headingId={ headingId }
                                     headingLevel={ headingLevel }
                                     headingText={ headingText }

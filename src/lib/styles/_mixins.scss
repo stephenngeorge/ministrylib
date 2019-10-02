@@ -23,9 +23,10 @@
  *  TYPOGRAPHY
  *  ----------
 */
-@mixin padded-text($color, $padding-x, $padding-y) {
-  display: inline-block;
-  background-color: $color;
-  padding: #{$padding-x}rem #{$padding-y}rem;
+@mixin padded-text($color, $padding-x, $padding-y, $line-height) {
+  display: inline;
   box-decoration-break: clone;
+  background: $color;
+  padding: #{$padding-x}rem #{$padding-y}rem;
+  line-height: $line-height;
 }

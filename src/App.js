@@ -20,7 +20,7 @@ export default () => (
                         buttonText="Get in touch"
                         buttonColor="complementary"
                         buttonOutline="dark"
-                        headingText="Find out more this is a long title"
+                        headingText="Find out more"
         />
         <TextLink       linkText="click me"
                         linkUrl="/"

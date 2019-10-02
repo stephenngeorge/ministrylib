@@ -51,10 +51,10 @@ $font-sizes-display: (
 
 @each $color, $hex in $theme-colors {
   .title__padded-text--#{$color} {
-    @include padded-text($hex, .6, 1);
+    @include padded-text($hex, .6, 1, 1.6);
   }
 
   .body__padded-text--#{$color} {
-    @include padded-text($hex, .4, .8);
+    @include padded-text($hex, .4, .8, 1.2);
   }
 }
