@@ -2,7 +2,8 @@ import './app.scss'
 
 import { Column, Container, Row } from './00-protons'
 import { Button, CoverImage, PlainText, TextLink, Title } from './01-atoms'
-import { CallToAction, HeroImage, HeroText } from './02-molecules'
+import { CallToAction, Event, HeroImage, HeroText } from './02-molecules'
+import { EventsList } from './03-organisms'
 
 export {
     Button,
@@ -10,6 +11,8 @@ export {
     Column,
     Container,
     CoverImage,
+    Event,
+    EventsList,
     HeroImage,
     HeroText,
     PlainText,

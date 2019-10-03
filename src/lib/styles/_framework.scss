@@ -15,5 +15,13 @@
  *  ----------
 */
 @import '../02-molecules/CallToAction/call-to-action';
+@import '../02-molecules/Event/event';
 @import '../02-molecules/HeroImage/hero-image';
 @import '../02-molecules/HeroText/hero-text';
+
+/*
+ *  ----------
+ *  ORGANISMS
+ *  ----------
+*/
+@import '../03-organisms/EventsList/events-list';

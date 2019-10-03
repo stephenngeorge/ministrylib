@@ -1,0 +1,2 @@
+[ ] - delete all styles after imports in app.scss. These are simulated local styles in a project using this library
+[ ] - delete all data files in the project root. These are to simulate data passed by a real project using this library
