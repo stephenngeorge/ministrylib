@@ -5,7 +5,8 @@ import defaults from './defaults'
 
 const Controls = ({
     additionalClasses,
-    months
+    months,
+    setMonthIndex
 }) => {
     const [activeMonth, setActiveMonth] = useState(months[0])
 
@@ -13,16 +14,24 @@ const Controls = ({
         const handleClick = e => {
             const currentIndex = months.indexOf(activeMonth)
             if (e.target.className === 'right-arrow' && currentIndex !== months.length - 1) {
-                setActiveMonth(months[currentIndex + 1])
+                let index = currentIndex + 1
+                setActiveMonth(months[index])
+                setMonthIndex(index)
             }
             else if (e.target.className === 'right-arrow' && currentIndex === months.length - 1) {
-                setActiveMonth(months[0])
+                let index = 0
+                setActiveMonth(months[index])
+                setMonthIndex(index)
             }
             else if (e.target.className === 'left-arrow' && currentIndex !== 0) {
-                setActiveMonth(months[currentIndex - 1])
+                let index = currentIndex - 1
+                setActiveMonth(months[index])
+                setMonthIndex(index)
             }
             else if (e.target.className === 'left-arrow' && currentIndex === 0) {
-                setActiveMonth(months[months.length - 1])
+                let index = months.length - 1
+                setActiveMonth(months[index])
+                setMonthIndex(index)
             }
         }
 
@@ -32,7 +41,7 @@ const Controls = ({
             leftArrow.addEventListener('click', handleClick)
             rightArrow.addEventListener('click', handleClick)
         }
-    }, [activeMonth, months])
+    }, [activeMonth, months, setMonthIndex])
 
     return (
         <div className={`event-list__controls ${additionalClasses.join(" ")}`}>
@@ -45,7 +54,8 @@ const Controls = ({
 
 Controls.propTypes = {
     additionalClasses: PropTypes.array,
-    months: PropTypes.array.isRequired
+    months: PropTypes.array.isRequired,
+    setMonthIndex: PropTypes.func.isRequired
 }
 
 Controls.defaultProps = {

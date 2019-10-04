@@ -35,7 +35,9 @@ export default () => (
                         linkUrl="/"
                         variation="internal"
         />
-        <EventsList     data={ eventData } />
+        <EventsList     additionalClasses={['bg--secondary']}
+                        data={ eventData }
+        />
     </Router>
     </div>
 )
