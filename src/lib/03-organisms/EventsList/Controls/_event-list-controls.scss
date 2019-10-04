@@ -1,0 +1,46 @@
+%arrow {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border: solid $color--dark;
+  border-width: 0 .125rem .125rem 0;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.event-list__controls {
+  margin: 0 auto;
+  @include set-grid-span(12);
+  @include breakpoint("sm") {
+    @include set-grid-span(10);
+  }
+  @include breakpoint("md") {
+    @include set-grid-span(8);
+  }
+  position: relative;
+
+  .left-arrow {
+    @extend %arrow;
+    bottom: 25%;
+    left: 1.4rem;
+    transform: rotate(135deg);
+  }
+
+  .right-arrow {
+    @extend %arrow;
+    bottom: 25%;
+    right: 1.4rem;
+    transform: rotate(-45deg);
+  }
+
+  &--month {
+    @include set-grid-span(8);
+    margin: 0 auto;
+    text-align: left;
+    font-family: $font-family-serif;
+    font-size: $font-size-lead;
+    color: $color--dark;
+  }
+}

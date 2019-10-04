@@ -1,7 +1,9 @@
 import React from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
 
-import { CallToAction, HeroImage, HeroText, PlainText, TextLink } from './lib'
+import eventData from './event-data'
+
+import { CallToAction, EventsList, HeroImage, HeroText, PlainText, TextLink } from './lib'
 
 import HeroPortrait from './lib/demo/Rowena_1.jpg'
 
@@ -33,6 +35,7 @@ export default () => (
                         linkUrl="/"
                         variation="internal"
         />
+        <EventsList     data={ eventData } />
     </Router>
     </div>
 )
