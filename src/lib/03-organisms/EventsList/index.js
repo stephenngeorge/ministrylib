@@ -1,3 +1,27 @@
+/**
+ * EVENTLIST
+ * 
+ * Event List components display a block of controls (left, right arrows and 
+ * the month name) with a <Month /> components beneath.
+ * 
+ * Event List recieves data, which should be structured:
+ * [
+ * ..{
+ * ....month<string>: 'January',
+ * ....events<array>: [
+ * ......{
+ * ........date<number>: 1,
+ * ........type<string>: "Event Category",
+ * ........location<string>: "String with whatever information is available",
+ * ........bookable<boolean>: true, [optional]
+ * ........bookingUrl<string>: "valid url" [optional]
+ * ......}
+ * ....]
+ * ..}
+ * ]
+ * 
+ */
+
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 

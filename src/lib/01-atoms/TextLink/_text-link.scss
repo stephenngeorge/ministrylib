@@ -1,5 +1,7 @@
 .text-link {
-  position: relative;
+  position: absolute;
+  right: 0;
+  transform: translate(0, -50%);
   text-decoration: none;
   padding: 1rem;
   padding-right: 2.5rem;

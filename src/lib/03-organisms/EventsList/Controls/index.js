@@ -1,3 +1,12 @@
+/**
+ * CONTROLS
+ * 
+ * Controls components are to be nested in an Events List organism.
+ * They receive a subset of the Events List's data - an array of month 
+ * names, which are rendered in the controls <p> tag.
+ * 
+ */
+
 import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 

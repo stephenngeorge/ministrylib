@@ -1,3 +1,13 @@
+/**
+ * MONTH
+ * 
+ * Month components are to be nested inside an Event List organism.
+ * It receives a subset of the Event List's data - a specific object from 
+ * the array. It then renders an <Event /> component for each item in that 
+ * data's .events array.
+ * 
+ */
+
 import React from 'react'
 import PropTypes from 'prop-types'
 
@@ -13,8 +23,8 @@ const Month = ({
         <div className={`month ${additionalClasses.join(" ")}`}>
             <ul>
                 {
-                    month.events.map(event => {
-                        return <Event {...event} />
+                    month.events.map((event, i) => {
+                        return <Event key={i} {...event} />
                     })
                 }
             </ul>

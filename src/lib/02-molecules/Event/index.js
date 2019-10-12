@@ -1,3 +1,14 @@
+/**
+ * EVENT
+ * 
+ * Event components are primarily designed to be nested inside 
+ * an EventsList component (see '03-organisms/EventsList').
+ * It displays a number (representing the date) next to some basic 
+ * event information. The bookable URL should point to a third party 
+ * event booking/organising platform (eventbrite, facebook)
+ * 
+ */
+
 import React from 'react'
 import PropTypes from 'prop-types'
 

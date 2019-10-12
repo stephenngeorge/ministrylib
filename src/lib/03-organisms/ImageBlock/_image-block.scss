@@ -1,0 +1,28 @@
+.image-block {
+  &__image-content {
+    height: 15rem;
+  }
+
+  &__text-content {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    @include set-grid-span(10);
+
+    .title {
+      color: $color--light;
+    }
+
+    .plain-text {
+      padding: 2rem 0;
+    }
+  }
+}
+
+#image-block--lead-text {
+  padding-bottom: 1rem;
+}
+#image-block--supporting-text {
+  padding-top: 1rem;
+  line-height: 150%;
+}

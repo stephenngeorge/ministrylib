@@ -16,13 +16,13 @@ const PlainText = ({
     paragraphId,
     text
 }) => {
-    return (
+    return text.length > 0 && text !== null && text !== undefined ? (
         <p  className={`plain-text ${additionalClasses.join(' ')}`}
             id={ paragraphId }
         >
             { text }
         </p>
-    )
+    ) : null
 }
 
 PlainText.propTypes = {
