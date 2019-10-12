@@ -7,7 +7,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 
 import eventData from './event-data'
 
-import { CallToAction, EventsList, HeroImage, HeroText, ImageBlock, PlainText, TextLink } from './lib'
+import { CallToAction, EventsList, HeroImage, HeroText, ImageBlock, PlainText, TextLink, QuoteBlock } from './lib'
 
 import HeroPortrait from './lib/demo/Rowena_1.jpg'
 import RoPortrait from './lib/demo/ro_BGPortrait.jpg'
@@ -52,6 +52,9 @@ export default () => (
         <TextLink       linkText="find out more"
                         linkUrl="/"
                         variation="internal"
+        />
+        <QuoteBlock     additionalClasses={['bg--main', 'color--light']}
+                        quoteText="This has given me fresh boldness to speak to everyone I know about Jesus"
         />
     </Router>
     </div>
