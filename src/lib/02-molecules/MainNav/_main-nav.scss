@@ -1,15 +1,42 @@
 .main-nav {
+  @include set-grid-span(12);
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: $base-shadow;
+  z-index: $zindex-foreground;
+  background-color: $color--dark;
+
+  &__icons {
+    @include set-grid-span(12);
+    display: flex;
+    justify-content: space-between;
+    background-color: $color--dark;
+    padding: 1.4rem 2rem;
+  }
+
+  &__site-logo, &__site-logo > img {
+    width: 3rem;
+    height: auto;
+  }
+
+  &__menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    &--bar {
+      width: 2.6rem;
+      height: .6rem;
+      background-color: $color--main;
+    }
+  }
+
   &__menu {
-    position: fixed;
-    top: 0;
-    left: 0;
     @include set-grid-span(12);
     display: flex;
     flex-flow: row wrap;
     list-style-type: none;
-    background-color: $color--dark;
-    box-shadow: $base-shadow;
-    z-index: $zindex-foreground;
 
     &--item {
       @include set-grid-span(12);

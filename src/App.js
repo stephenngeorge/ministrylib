@@ -11,11 +11,12 @@ import { CallToAction, EventsList, HeroImage, HeroText, ImageBlock, Page, PlainT
 
 import HeroPortrait from './lib/demo/Rowena_1.jpg'
 import RoPortrait from './lib/demo/ro_BGPortrait.jpg'
+import Site_Logo from './lib/demo/Esther_Logo_Green.jpg'
 
 export default () => (
     <div className="app">
     <Router>
-        <Page>
+        <Page navLogo={ Site_Logo }>
             <HeroImage      imageUrl={ HeroPortrait }
                             divHeight={60}
                             additionalClasses={['animate']}

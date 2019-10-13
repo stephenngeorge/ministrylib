@@ -19,11 +19,22 @@ import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
 const MainNav = ({
-    menuItems
+    menuItems,
+    siteLogo
 }) => {
     return (
         <nav className="main-nav">
-            <div className="main-nav__site-logo">
+            <div className="main-nav__icons">
+                <div className="main-nav__site-logo">
+                    {   !!siteLogo &&
+                        <img alt="esther ministry logo" src={ siteLogo } />
+                    }
+                </div>
+
+                <div className="main-nav__menu-icon">
+                    <div className="main-nav__menu-icon--bar"></div>
+                    <div className="main-nav__menu-icon--bar"></div>
+                </div>
             </div>
 
             <ul className="main-nav__menu">
@@ -42,7 +53,8 @@ const MainNav = ({
 }
 
 MainNav.propTypes = {
-    menuItems: PropTypes.array.isRequired
+    menuItems: PropTypes.array.isRequired,
+    siteLogo: PropTypes.string
 }
 
 export default MainNav

@@ -7,14 +7,18 @@
 */
 
 import React from 'react'
+import PropTypes from 'prop-types'
+
 import { MainNav } from '../../02-molecules'
 
 const Page = ({
-    children
+    children,
+    navLogo
 }) => {
     return (
         <div className="page">
-            <MainNav menuItems={[
+            <MainNav    siteLogo={ navLogo }
+                        menuItems={[
                 {
                     url: '/about',
                     text: 'About'
@@ -31,6 +35,10 @@ const Page = ({
             { children }
         </div>
     )
+}
+
+Page.propTypes = {
+    navLogo: PropTypes.string
 }
 
 export default Page
