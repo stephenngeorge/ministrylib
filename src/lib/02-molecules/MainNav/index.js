@@ -14,7 +14,7 @@
  * 
 */
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
@@ -22,12 +22,31 @@ const MainNav = ({
     menuItems,
     siteLogo
 }) => {
+    useEffect(() => {
+        const menuIcon = document.querySelector('.main-nav__menu-icon')
+        const navMenu = document.querySelector('.main-nav__menu')
+
+        if (
+            menuIcon !== null && menuIcon !== undefined && 
+            navMenu !== null && navMenu !== undefined
+        ) {
+            const toggleNav = () => {
+                console.log('toggle')
+                navMenu.classList.toggle('in-view')
+                menuIcon.classList.toggle('icon-transform')
+            }
+            menuIcon.addEventListener('click', toggleNav)
+        }
+    }, [])
+
     return (
         <nav className="main-nav">
             <div className="main-nav__icons">
                 <div className="main-nav__site-logo">
                     {   !!siteLogo &&
-                        <img alt="esther ministry logo" src={ siteLogo } />
+                        <Link to="/">
+                            <img alt="esther ministry logo" src={ siteLogo } />
+                        </Link>
                     }
                 </div>
 

@@ -3,19 +3,24 @@
   position: fixed;
   top: 0;
   left: 0;
-  box-shadow: $base-shadow;
   z-index: $zindex-foreground;
   background-color: $color--dark;
 
   &__icons {
     @include set-grid-span(12);
     display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    height: 5rem;
     justify-content: space-between;
     background-color: $color--dark;
-    padding: 1.4rem 2rem;
+    padding: 0 2rem;
+    z-index: $zindex-foreground + 10;
+    box-shadow: $base-shadow;
   }
 
-  &__site-logo, &__site-logo > img {
+  &__site-logo, &__site-logo > a, &__site-logo > a > img {
     width: 3rem;
     height: auto;
   }
@@ -24,23 +29,35 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding: 1rem;
+    margin-right: -1rem;
 
     &--bar {
       width: 2.6rem;
       height: .6rem;
+      margin: .5rem 0;
       background-color: $color--main;
+      position: relative;
+
+      transition: transform .4s ease-out;
     }
   }
 
   &__menu {
+    z-index: $zindex-foreground - 10;
+    position: absolute;
+    top: -12rem;
     @include set-grid-span(12);
     display: flex;
     flex-flow: row wrap;
     list-style-type: none;
+    background-color: $color--dark;
+
+    transition: top .4s ease-out;
 
     &--item {
       @include set-grid-span(12);
-      padding: 1rem 0;
+      padding: 1.4rem 0;
 
       a {
         width: 100%;
@@ -54,6 +71,26 @@
         font-weight: $font-weight-light;
         text-transform: uppercase;
       }
+    }
+  }
+}
+
+.in-view {
+  top: 5rem;
+}
+
+.icon-transform {
+  .main-nav__menu-icon--bar {
+    &:nth-child(1) {
+    transform-origin: left top;
+    transform: rotate(45deg);
+    left: .4rem;
+    }
+
+    &:nth-last-child(1) {
+    transform-origin: left bottom;
+    transform: rotate(-45deg);
+    left: .4rem;
     }
   }
 }

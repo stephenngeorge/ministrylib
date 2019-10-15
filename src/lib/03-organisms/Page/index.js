@@ -9,35 +9,32 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { MainNav } from '../../02-molecules'
+import { Footer, MainNav } from '../../02-molecules'
 
 const Page = ({
     children,
+    footerAffiliation,
+    footerAffiliationUrl,
+    navLinks,
     navLogo
 }) => {
     return (
         <div className="page">
             <MainNav    siteLogo={ navLogo }
-                        menuItems={[
-                {
-                    url: '/about',
-                    text: 'About'
-                },
-                {
-                    url: '/board',
-                    text: 'Advisory Board'
-                },
-                {
-                    url: '/contact',
-                    text: 'Contact'
-                }
-            ]} />
+                        menuItems={ navLinks } />
             { children }
+            <Footer     affiliation={ footerAffiliation }
+                        affiliationUrl={ footerAffiliationUrl }
+                        siteMapLinks={ navLinks }
+            />
         </div>
     )
 }
 
 Page.propTypes = {
+    footerAffiliation: PropTypes.string,
+    footerAffiliationUrl: PropTypes.string,
+    navLinks: PropTypes.array.isRequired,
     navLogo: PropTypes.string
 }
 
