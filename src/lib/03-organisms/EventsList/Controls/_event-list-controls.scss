@@ -5,8 +5,12 @@
   border: solid $color--dark;
   border-width: 0 .125rem .125rem 0;
 
+  transition: border .4s;
+
   &:hover {
     cursor: pointer;
+    border: solid $color--light;
+    border-width: 0 .125rem .125rem 0;
   }
 }
 

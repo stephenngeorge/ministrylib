@@ -26,6 +26,10 @@
   }
 
   &__menu-icon {
+    @include breakpoint("lg") {
+      display: none;
+    }
+
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -57,10 +61,16 @@
 
     &--item {
       @include set-grid-span(12);
-      padding: 1.4rem 0;
+
+      @include breakpoint("lg") {
+        @include set-grid-span(4);
+        display: flex;
+        align-items: center;
+      }
 
       a {
         width: 100%;
+        padding: 1.4rem 0;
         text-decoration: none;
         text-align: center;
 
@@ -70,7 +80,30 @@
         font-size: $font-size-lead;
         font-weight: $font-weight-light;
         text-transform: uppercase;
+
+        transition: background-color .4s;
+
+        @include breakpoint("lg") {
+          font-size: $font-size-base;
+          height: 5rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        &:hover {
+          background-color: $color--very-dark;
+        }
       }
+    }
+
+    @include breakpoint("lg") {
+      top: 0;
+      right: 0;
+      z-index: $zindex-foreground + 20;
+      height: 5rem;
+
+      @include set-grid-span(6);
     }
   }
 }
