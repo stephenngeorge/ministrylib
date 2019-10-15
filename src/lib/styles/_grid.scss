@@ -84,20 +84,49 @@
  *  SPACING
  *  ----------
 */
-.no-padding-x {
+
+// ------- PADDING
+
+%no-padding-x {
   padding-left: 0;
   padding-right: 0;
 }
-.no-padding-y {
+.no-padding-x {
+  @extend %no-padding-x;
+}
+
+%no-padding-y {
   padding-top: 0;
   padding-bottom: 0;
 }
+.no-padding-y {
+  @extend %no-padding-y;
+}
 
-.no-margin-x {
+.no-padding {
+  @extend %no-padding-x;
+  @extend %no-padding-y;
+}
+
+// ------- MARGIN
+
+%no-margin-x {
   margin-left: 0;
   margin-right: 0;
 }
-.no-margin-y {
+.no-margin-x {
+  @extend %no-margin-x;
+}
+
+%no-margin-y {
   margin-top: 0;
   margin-bottom: 0;
+}
+.no-margin-y {
+  @extend %no-margin-y;
+}
+
+.no-margin {
+  @extend %no-margin-x;
+  @extend %no-margin-y;
 }

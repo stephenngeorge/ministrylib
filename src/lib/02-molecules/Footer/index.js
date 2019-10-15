@@ -10,7 +10,7 @@ const Footer = ({
     siteMapLinks
 }) => {
     return (
-        <footer className="footer container">
+        <footer className="footer container--full-width">
             <div className="footer__affiliation">
                 <p>Esther Ministry is proud to support the</p>
                 <Link to={ affiliationUrl }>{ affiliation }</Link>

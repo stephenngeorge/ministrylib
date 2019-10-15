@@ -10,8 +10,8 @@ const QuoteBlock = ({
     quoteText
 }) => {
     return (
-        <div className={`quote-block container ${additionalClasses.join(" ")}`}>
-            <PlainText  additionalClasses={['font-family--cursive']}
+        <div className={`quote-block container--full-width ${additionalClasses.join(" ")}`}>
+            <PlainText  additionalClasses={['font-family--cursive', 'container', 'no-padding']}
                         text={quoteText}
             />
         </div>

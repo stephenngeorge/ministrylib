@@ -1,15 +1,6 @@
 .quote-block {
   .plain-text {
     position: relative;
-    padding-left: 1rem;
     font-size: 2.6rem;
-
-    &::before {
-      position: absolute;
-      content: '\02018';
-      top: -50%;
-      left: -1rem;
-      font-size: 12rem;
-    }
   }
 }
