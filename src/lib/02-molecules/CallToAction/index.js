@@ -1,6 +1,8 @@
 /**
  * CALL TO ACTION
  * 
+ * @todo refactor this to use classes, not protons...remove protons
+ * 
  * CallToAction components are full-width blocks 
  * that contain a title, a body of text and a button
  * 

@@ -5,6 +5,6 @@
     @include set-grid-span(10);
   }
   @include breakpoint("md") {
-    @include set-grid-span(8);
+    @include set-grid-span(6);
   }
 }

@@ -1,10 +1,12 @@
 .tab-contents {
   @include set-grid-span(12);
-  padding: 1rem 2rem;
+  padding: 2rem 0;
 
   &__lead-paragraph, &__supporting-paragraph {
     color: $color--light;
     padding-bottom: 1rem;
+
+    @extend %text-container--very-narrow;
   }
 
   &__lead-paragraph {

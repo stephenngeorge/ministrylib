@@ -1,6 +1,13 @@
 .tabs {
+  @include set-grid-span(12);
   display: flex;
   list-style-type: none;
+
+  @include breakpoint("lg") {
+    @include set-grid-span(6);
+    margin: 0 auto 1rem;
+    justify-content: space-between;
+  }
 
   li {
     flex-basis: 50%;
@@ -9,5 +16,10 @@
     font-family: $font-family-sans-serif;
     font-size: $font-size-lead;
     color: $color--light;
+
+    @include breakpoint("lg") {
+      flex-basis: 48%;
+      border: 2px solid $color--dark;
+    }
   }
 }

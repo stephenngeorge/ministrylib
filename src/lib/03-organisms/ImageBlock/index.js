@@ -27,10 +27,29 @@ const ImageBlock = ({
                 textBlock.style.marginTop = '0px'
             }
         }
-        positionText()
-        window.addEventListener('resize', positionText)
 
-        return () => document.removeEventListener('resize', positionText)
+        const setImageHeight = () => {
+            const imageContent = document.querySelector('.image-block__image-content')
+            const textBlock = document.querySelector('.image-block__text-content')
+
+            if (window.innerWidth >= 992) {
+                console.log(textBlock.offsetHeight)
+                imageContent.style.height = `${textBlock.offsetHeight}px`
+            }
+            else {
+                imageContent.style.height = '15rem'
+            }
+        }
+
+        const manipulateDOM = () => {
+            positionText()
+            setImageHeight()
+        }
+
+        manipulateDOM()
+        window.addEventListener('resize', manipulateDOM)
+
+        return () => document.removeEventListener('resize', manipulateDOM)
     }, [])
 
     return (

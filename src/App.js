@@ -32,7 +32,7 @@ export default () => (
                 <HeroText       bodyText="Esther Ministry is an international mission to see people equipped, empowered and released into their true calling. Esther Minsitry was founded by Rowena Cross: a speaker, church leader and evangelist with a passion to release people into their gifting and set them on fire for God."
                                 headingText="Esther Ministry"
                 />
-                <TabContent     tabs={[
+                {/* <TabContent     tabs={[
                                     {
                                         color: 'main',
                                         key: 1,
@@ -52,7 +52,7 @@ export default () => (
                                         }
                                     }
                                 ]}
-                />
+                /> */}
                 <CallToAction   paragraphText="Enquire about booking a course, find out more about Rowena and Esther Ministry"
                                 backgroundColor="main"
                                 buttonLink="#"
@@ -61,7 +61,7 @@ export default () => (
                                 buttonOutline="dark"
                                 headingText="Find out more"
                 />
-                <PlainText      additionalClasses={['text--lead', 'text-container--narrow']}
+                <PlainText      additionalClasses={['text--lead', 'white-space-y', 'text-container--very-narrow']}
                                 text="Rowena serves as Assistant Pastor in charge of Evangelism and Discipleship at St Saviour's Church, Sunbury. She has appeared on UCB, and worked with organisations like TearFund and New Wine."
                                 paragraphId="intro-text"
                 />
