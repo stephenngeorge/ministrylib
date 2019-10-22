@@ -39,16 +39,16 @@ const HeroImage = ({
         if (animate === 'onScroll') {
             const animateImageScale = () => {
                 const image = document.querySelector('#hero-image')
-                if (window.scrollY > scroll) {
-                    // access the transform style of hero-image
-                    let scaler = (125 - scroll / 8) / 100
-                    if (scaler <= 1) scaler = 1
-    
-                    let saturation = 100 - scroll
-                    image.style.transform = `scale(${scaler}, ${scaler})`
-                    image.style.filter = `saturate(${saturation}%)`
-                    setScroll(window.scrollY)
-                }
+                // access the transform style of hero-image
+                let scaler = (125 - scroll / 8) / 100
+                let saturation = 100 - scroll
+                
+                if (scaler <= 1) scaler = 1
+                if (scaler >= 1.25) scaler = 1.25
+
+                image.style.transform = `scale(${scaler}, ${scaler})`
+                image.style.filter = `saturate(${saturation}%)`
+                setScroll(window.scrollY)
             }
             document.addEventListener('scroll', animateImageScale)
          

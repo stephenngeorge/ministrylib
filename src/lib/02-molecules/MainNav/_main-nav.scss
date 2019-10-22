@@ -127,3 +127,8 @@
     }
   }
 }
+
+// should be applied to .main-nav__icons, .main-nav__menu--item, &--item > a
+.small-nav {
+  height: 3.5rem;
+}

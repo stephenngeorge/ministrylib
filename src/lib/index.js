@@ -3,7 +3,7 @@ import './app.scss'
 import { Column, Container, Row } from './00-protons'
 import { Button, CoverImage, PlainText, TextLink, Title } from './01-atoms'
 import { CallToAction, Event, HeroImage, HeroText, Highlights, MainNav, QuoteBlock } from './02-molecules'
-import { EventsList, ImageBlock, Page } from './03-organisms'
+import { EventsList, ImageBlock, Page, TabContent } from './03-organisms'
 
 export {
     Button,
@@ -21,6 +21,7 @@ export {
     Page,
     PlainText,
     Row,
+    TabContent,
     TextLink,
     Title,
     QuoteBlock

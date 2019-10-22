@@ -22,20 +22,35 @@ const MainNav = ({
     menuItems,
     siteLogo
 }) => {
+    // ANIMATE NAV BAR ON MENU ICON CLICK (small breakpoints)
     useEffect(() => {
         const menuIcon = document.querySelector('.main-nav__menu-icon')
         const navMenu = document.querySelector('.main-nav__menu')
+        
+        const toggleNav = () => {
+            navMenu.classList.toggle('in-view')
+            menuIcon.classList.toggle('icon-transform')
+        }
 
         if (
             menuIcon !== null && menuIcon !== undefined && 
             navMenu !== null && navMenu !== undefined
         ) {
-            const toggleNav = () => {
-                console.log('toggle')
-                navMenu.classList.toggle('in-view')
-                menuIcon.classList.toggle('icon-transform')
-            }
             menuIcon.addEventListener('click', toggleNav)
+        }
+
+        return () => menuIcon.removeEventListener('click', toggleNav)
+    }, [])
+    // ANIMATE NAV BAR ON SCROLL
+    useEffect(() => {
+        const iconsBar = document.querySelector('.main-nav__icons')
+        const menuItems = Array.from(document.querySelectorAll('.main-nav__menu--item'))
+        const menuLinks = Array.from(document.querySelectorAll('.main-nav__menu--item > a'))
+
+        const toggleNavHeight = () => {
+            iconsBar.classList.toggle('small-nav')
+            menuItems.forEach(item => item.classList.toggle('small-nav'))
+            menuLinks.forEach(link => link.classList.toggle('small-nav'))
         }
     }, [])
 

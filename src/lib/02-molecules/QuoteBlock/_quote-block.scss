@@ -2,5 +2,12 @@
   .plain-text {
     position: relative;
     font-size: 2.6rem;
+    text-align: left;
+    justify-content: flex-start;
+
+    @include breakpoint("lg") {
+      text-align: center;
+      justify-content: center;
+    }
   }
 }

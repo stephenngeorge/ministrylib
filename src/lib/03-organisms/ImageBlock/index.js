@@ -15,11 +15,17 @@ const ImageBlock = ({
 }) => {
     useEffect(() => {
         const positionText = () => {
-            const titleHeight = Math.floor(document.querySelector('#that-esther-moment').offsetHeight)
             const textBlock = document.querySelector('.image-block__text-content')
-            const yOffset = Math.ceil(-titleHeight / 2)
 
-            textBlock.style.marginTop = `${yOffset}px`
+            if (window.innerWidth < 992) {
+                const titleHeight = Math.floor(document.querySelector('#that-esther-moment').offsetHeight)
+                const yOffset = Math.ceil(-titleHeight / 2)
+    
+                textBlock.style.marginTop = `${yOffset}px`
+            }
+            else {
+                textBlock.style.marginTop = '0px'
+            }
         }
         positionText()
         window.addEventListener('resize', positionText)
