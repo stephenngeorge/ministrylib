@@ -1,0 +1,20 @@
+.site-map {
+  p {
+    color: $color--mid;
+    font-size: $font-size-small;
+    text-transform: uppercase;
+  }
+
+  ul {
+    display: flex;
+    list-style-type: none;
+  }
+
+  li > a {
+    color: $color--mid;
+    text-decoration: none;
+    font-family: $font-family-sans-serif;
+    font-size: $font-size-small;
+    padding-right: 1rem;
+  }
+}

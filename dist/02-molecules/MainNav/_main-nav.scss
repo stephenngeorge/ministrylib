@@ -56,6 +56,7 @@
     @include set-grid-span(12);
     display: flex;
     flex-flow: row wrap;
+    list-style-type: none;
     background-color: $color--dark;
 
     transition: top .4s ease-out;

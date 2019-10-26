@@ -1,0 +1,15 @@
+@each $color, $hex in $theme-colors {
+  %color--#{$color} {
+    color: $hex;
+  }
+  .color--#{$color} {
+    @extend %color--#{$color};
+  }
+
+  %bg--#{$color} {
+    background-color: $hex;
+  }
+  .bg--#{$color} {
+    @extend %bg--#{$color};
+  }
+}

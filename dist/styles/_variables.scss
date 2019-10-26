@@ -1,0 +1,100 @@
+/*  ******
+----------
+FONTS
+----------
+******  */
+// sans-serif
+@import url('https://fonts.googleapis.com/css?family=Assistant:300,400,700&display=swap');
+$font-family-sans-serif:    'Assistant', Arial, sans-serif !default;
+// serif
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap');
+$font-family-serif:         'Playfair Display', Courier, serif !default;
+// cursive
+@import url('https://fonts.googleapis.com/css?family=Lovers+Quarrel&display=swap');
+$font-family-cursive:       'Lovers Quarrel', cursive !default;
+
+$font-families: (
+  "sans-serif": $font-family-sans-serif,
+  "serif": $font-family-serif,
+  "cursive": $font-family-cursive
+) !default;
+
+$font-weight-light:         300 !default;
+$font-weight-normal:        400 !default;
+$font-weight-heavy:         700 !default;
+
+$font-weights: (
+  "light": $font-weight-light,
+  "normal": $font-weight-normal,
+  "heavy": $font-weight-heavy
+) !default;
+
+/*  ******
+----------
+TYPOGRAPHY
+----------
+******  */
+$font-size-base:            1rem !default;
+$font-size-lead:            $font-size-base * 1.3 !default;
+$font-size-small:           $font-size-base * .8 !default;
+
+$font-sizes: (
+  "base": $font-size-base,
+  "lead": $font-size-lead,
+  "small": $font-size-small
+) !default;
+
+/*  ******
+----------
+COLOURS
+----------
+******  */
+$color--main:               #77ADA5 !default;
+$color--complementary:      #AD777F !default;
+$color--secondary:          #779AAD !default;
+$color--dark:               #3E403F !default;
+$color--very-dark:          #2B2C2C !default;
+$color--mid:                #B1B2B2 !default;
+$color--light:              #FFFFFF !default;
+
+$black-50:                  rgba(0, 0, 0, .5);
+$black-70:                  rgba(0, 0, 0, .7);
+
+$theme-colors: (
+  "main": $color--main,
+  "complementary": $color--complementary,
+  "secondary": $color--secondary,
+  "dark": $color--dark,
+  "light": $color--light
+) !default;
+
+/*  ******
+----------
+SHADOWS
+----------
+******  */
+$base-shadow:               0 0 6px 0 $black-50;
+
+/*  ******
+----------
+LAYOUT
+----------
+******  */
+
+// ------- BREAKPOINTS
+
+$breakpoint-sm:             576px !default;
+$breakpoint-md:             767px !default;
+$breakpoint-lg:             992px !default;
+
+$breakpoints: (
+  "sm": $breakpoint-sm,
+  "md": $breakpoint-md,
+  "lg": $breakpoint-lg
+) !default;
+
+// ------- ZINDEX
+
+$zindex-foreground:         500 !default;
+$zindex-behind:             -10 !default;
+$zindex-background:         -500 !default;

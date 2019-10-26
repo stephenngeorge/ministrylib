@@ -1,0 +1,10 @@
+.month {
+  margin: 0 auto;
+  @include set-grid-span(12);
+  @include breakpoint("sm") {
+    @include set-grid-span(10);
+  }
+  @include breakpoint("md") {
+    @include set-grid-span(6);
+  }
+}

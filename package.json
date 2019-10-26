@@ -1,9 +1,14 @@
 {
   "name": "ministrylib",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "dependencies": {
     "eslint": "^6.4.0",
     "node-sass": "^4.12.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-router-dom": "^5.1.1",
+    "react-scripts": "3.1.1",
     "typescript": "^3.6.3"
   },
   "scripts": {
@@ -28,16 +33,14 @@
     ]
   },
   "devDependencies": {
-    "@babel/cli": "^7.6.4",
-    "prop-types": "^15.7.2",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-router-dom": "^5.1.1",
-    "react-scripts": "3.1.1"
+    "@babel/cli": "^7.6.4"
   },
   "main": "dist/index.js",
   "module": "dist/index.js",
-  "files": [ "dist", "README.md" ],
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "repository": {
     "type": "git",
     "url": "URL_OF_YOUR_REPOSITORY"

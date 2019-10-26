@@ -1,0 +1,15 @@
+.profile {
+  padding-bottom: 2rem;
+  width: 100%;
+
+  img {
+    width: 70%;
+    margin-bottom: 1rem;
+  }
+
+  &__text-content {
+    .title {
+      margin-bottom: .5rem;
+    }
+  }
+}

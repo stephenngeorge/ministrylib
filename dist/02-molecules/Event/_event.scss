@@ -1,0 +1,51 @@
+.event {
+  @include set-grid-span(8);
+  margin: 0 auto;
+  padding: 1rem 0 0;
+
+  display: flex;
+  
+  &__date {
+    margin-right: .6rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $color--dark;
+
+    p {
+      font-family: $font-family-serif;
+      color: $color--light;
+      line-height: 2.4rem;
+    }
+  }
+
+  &__text-content {
+    &--event-type {
+      text-transform: uppercase;
+      color: $color--light;
+      font-size: $font-size-lead;
+      line-height: 1rem;
+    }
+
+    &--location {
+      color: $color--dark;
+      padding: .3rem 0;
+    }
+
+    a {
+      color: $color--light;
+      font-family: $font-family-serif;
+      text-decoration: none;
+      border-bottom: 2px solid $color--light;
+      transition: color .4s, border .4s;
+
+      &:hover {
+        color: darken($color--light, 15%);
+        border-bottom: 2px solid darken($color--light, 15%);
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+// setup map for headings sizes, these styles are implemented 
+// in './base.scss', $font-size-base imported from './variables.scss'
+$font-sizes-headings: (
+  "h1": $font-size-base * 2,
+  "h2": $font-size-base * 1.8,
+  "h3": $font-size-base * 1.5,
+  "h4": $font-size-base * 1.3,
+  "h5": $font-size-base * 1.1,
+  "h6": $font-size-base * 1
+) !default;
+// use map $font-sizes-headings to generate classes that can 
+// force font size changes on any element
+@each $tag, $size in $font-sizes-headings {
+  .text--#{$tag} {
+    font-size: $size;
+  }
+}
+
+$font-sizes-display: (
+  "site-title": $font-size-base * 3,
+  "page-title": $font-size-base * 2.4
+) !default;
+// use map $font-sizes-display to generate classes that can 
+// force font size changes on any element
+@each $name, $size in $font-sizes-display {
+  .text--#{$name} {
+    font-size: $size;
+  }
+}
+
+// $font-size-lead imported from './variables.scss'
+@each $size, $value in $font-sizes {
+  .text--#{$size} {
+    font-size: $value;
+  }
+}
+
+// map $font-families imported from './variables.scss
+@each $family, $name in $font-families {
+  .font-family--#{$family} {
+    font-family: $name;
+  }
+}
+
+// map $font-weights imported from './variables.scss'
+@each $weight, $value in $font-weights {
+  .font-weight--#{$weight} {
+    font-weight: $value;
+  }
+}
+
+@each $color, $hex in $theme-colors {
+  .title__padded-text--#{$color} {
+    @include padded-text($hex, .6, 1, 1.6);
+  }
+
+  .body__padded-text--#{$color} {
+    @include padded-text($hex, .4, .8, 1.2);
+  }
+}

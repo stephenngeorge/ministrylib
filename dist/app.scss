@@ -7,20 +7,9 @@
 */
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body {
-  min-height: 100vh;
-  scroll-behavior: smooth;
-  text-rendering: auto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 @import './styles/variables';
@@ -31,3 +20,9 @@ body {
 @import './styles/typography';
 @import './styles/framework';
 @import './styles/base';
+
+#intro-text {
+  padding: 2rem 0;
+  font-weight: $font-weight-light;
+  font-size: $font-size-lead;
+}
