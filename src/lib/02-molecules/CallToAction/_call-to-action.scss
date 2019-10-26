@@ -1,18 +1,16 @@
 .call-to-action {
   display: flex;
+  flex-direction: column;
   justify-content: center;
 
   box-shadow: $base-shadow;
 
-  @include breakpoint("sm") {
-    .column {
-      max-width: 22rem;
-      margin: 0 auto;
-    }
-  }
-
   &__text-content {
     padding: 0 1rem;
+
+    @include breakpoint("md") {
+      max-width: 22rem;
+    }
 
     h2, p {
       margin-bottom: 1rem;

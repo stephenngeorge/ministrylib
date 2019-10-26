@@ -37,11 +37,11 @@ const EventsList = ({
 }) => {
     const [monthIndex, setMonthIndex] = useState(0)
     return (
-        <div className={`events-list ${additionalClasses.join(" ")}`}>
+        <section className={`events-list ${additionalClasses.join(" ")}`}>
             <Title headingLevel={2} headingText="Upcoming Events" />
             <Controls months={ data.map(event => event.month) } setMonthIndex={setMonthIndex} />
             <Month month={data[monthIndex]} />
-        </div>
+        </section>
     )
 }
 

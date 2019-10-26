@@ -3,4 +3,8 @@
     margin: 0 auto;
     @extend %text-container--very-narrow;
   }
+
+  .plain-text {
+    padding: 2rem 0;
+  }
 }

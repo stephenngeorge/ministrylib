@@ -27,16 +27,6 @@ const HeroImage = ({
 
     useEffect(() => {
         if (animate === 'onScroll') {
-            const image = document.querySelector('#hero-image')
-            if (image !== null) {
-                image.style.transform = "scale(1.25, 1.25)"
-                image.style.filter = "saturate(100%)"
-            }
-        }
-    }, [animate])
-
-    useEffect(() => {
-        if (animate === 'onScroll') {
             const animateImageScale = () => {
                 const image = document.querySelector('#hero-image')
                 // access the transform style of hero-image

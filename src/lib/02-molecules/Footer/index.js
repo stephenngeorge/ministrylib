@@ -1,3 +1,13 @@
+/**
+ * FOOTER
+ * 
+ * Footer component is rendered in the Page layout component and 
+ * therefore appears at the bottom of the page. Extra child components 
+ * could be added here as the project grows. Footer currently displays 
+ * a link the affiliated charity and a basic site map.
+ * 
+ */
+
 import React from 'react'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'

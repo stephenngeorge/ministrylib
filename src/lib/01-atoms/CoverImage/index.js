@@ -22,14 +22,14 @@ const CoverImage = ({
 }) => {
     // warn about defaults
     if (altText === defaults.altText.value) console.warn(defaults.altText.warning)
-    return (
+    return imageUrl.length > 0 && imageUrl !== null && imageUrl !== undefined ? (
         <div className={`cover-image cover-image__image-container ${additionalClasses.join(' ')}`}>
             <img    src={ imageUrl }
                     alt={ altText }
                     id={ imageId }
             />
         </div>
-    )
+    ) : null
 }
 
 CoverImage.propTypes = {

@@ -1,3 +1,14 @@
+/**
+ * IMAGE BLOCK
+ * 
+ * Image Block components are used to display an image with 
+ * supporting text to the side. On smaller breakpoints, the 
+ * layout collapses to a vertical stack.
+ * 
+ * @todo provide option for rendereing image on left or right
+ * 
+ */
+
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 
@@ -14,6 +25,10 @@ const ImageBlock = ({
     supportingText
 }) => {
     useEffect(() => {
+        /**
+         * positionText moves all of the text content up by half the title height on small breakpoints 
+         * so that the title overlaps the image
+         */
         const positionText = () => {
             const textBlock = document.querySelector('.image-block__text-content')
 
@@ -27,17 +42,18 @@ const ImageBlock = ({
                 textBlock.style.marginTop = '0px'
             }
         }
-
+        /**
+         * setImageHeight establish the height of the image, based on the height of the text content
+         */
         const setImageHeight = () => {
             const imageContent = document.querySelector('.image-block__image-content')
             const textBlock = document.querySelector('.image-block__text-content')
 
             if (window.innerWidth >= 992) {
-                console.log(textBlock.offsetHeight)
                 imageContent.style.height = `${textBlock.offsetHeight}px`
             }
             else {
-                imageContent.style.height = '15rem'
+                imageContent.style.height = '18rem'
             }
         }
 
@@ -53,7 +69,7 @@ const ImageBlock = ({
     }, [])
 
     return (
-        <div className={`image-block ${additionalClasses.join(" ")}`}>
+        <section className={`image-block ${additionalClasses.join(" ")}`}>
             <div className="image-block__image-content">
                 <CoverImage     altText={ imageAltText }
                                 imageUrl={ imageUrl }
@@ -75,7 +91,7 @@ const ImageBlock = ({
                             paragraphId="image-block--supporting-text"
                 />
             </div>
-        </div>
+        </section>
     )
 }
 

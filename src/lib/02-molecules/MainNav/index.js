@@ -14,7 +14,7 @@
  * 
 */
 
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
@@ -22,6 +22,8 @@ const MainNav = ({
     menuItems,
     siteLogo
 }) => {
+    const [scroll, setScroll] = useState(0)
+
     // ANIMATE NAV BAR ON MENU ICON CLICK (small breakpoints)
     useEffect(() => {
         const menuIcon = document.querySelector('.main-nav__menu-icon')
@@ -40,18 +42,6 @@ const MainNav = ({
         }
 
         return () => menuIcon.removeEventListener('click', toggleNav)
-    }, [])
-    // ANIMATE NAV BAR ON SCROLL
-    useEffect(() => {
-        const iconsBar = document.querySelector('.main-nav__icons')
-        const menuItems = Array.from(document.querySelectorAll('.main-nav__menu--item'))
-        const menuLinks = Array.from(document.querySelectorAll('.main-nav__menu--item > a'))
-
-        const toggleNavHeight = () => {
-            iconsBar.classList.toggle('small-nav')
-            menuItems.forEach(item => item.classList.toggle('small-nav'))
-            menuLinks.forEach(link => link.classList.toggle('small-nav'))
-        }
     }, [])
 
     return (

@@ -23,17 +23,17 @@ const TextLink = ({
     // warn about defaults
     if (defaults.variation.range.indexOf(variation) < 0) console.warn(defaults.variation.warning)
 
-    const internalLink = (
+    const internalLink = linkText.length > 0 && linkUrl.length > 0 ? (
         <Link to={linkUrl} className={ `text-link ${additionalClasses.join(' ')}` }>
             { linkText }
         </Link>
-    )
+    ) : null
 
-    const externalLink = (
+    const externalLink = linkText.length > 0 && linkUrl.length > 0 ? (
         <a href={linkUrl} className={ `text-link ${additionalClasses.join(' ')}` }>
             { linkText }
         </a>
-    )
+    ) : null
 
     return variation === 'internal' ? internalLink : externalLink
 }

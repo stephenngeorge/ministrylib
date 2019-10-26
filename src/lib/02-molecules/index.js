@@ -3,9 +3,9 @@ import Event from './Event'
 import Footer from './Footer'
 import HeroImage from './HeroImage'
 import HeroText from './HeroText'
-import Highlights from './Highlights'
 import MainNav from './MainNav'
 import QuoteBlock from './QuoteBlock'
+import Testimonial from './Testimonial'
 
 export {
     CallToAction,
@@ -13,7 +13,7 @@ export {
     Footer,
     HeroImage,
     HeroText,
-    Highlights,
     MainNav,
-    QuoteBlock
+    QuoteBlock,
+    Testimonial
 }

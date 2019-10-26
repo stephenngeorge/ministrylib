@@ -1,3 +1,12 @@
+/**
+ * CONTENT
+ * 
+ * Content component is to be used in the TabContent component. It renders 
+ * the content of a particular piece of tabulated content. Which tab and tab-content 
+ * is rendered is controlled by the Tabs components (../Tabs)
+ * 
+ */
+
 import React from 'react'
 import PropTypes from 'prop-types'
 

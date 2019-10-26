@@ -40,8 +40,8 @@ const HeroText = ({
                         headingText={ headingText }
                         additionalClasses={['text--site-title', 'font-weight--heavy', 'title__padded-text--main', 'color--light']}
                 />
-                <PlainText  text={ bodyText }
-                            paragraphId="intro-text"
+                <PlainText  additionalClasses={['text--lead', 'font-weight--light']}
+                            text={ bodyText }
                 />
             </div>
         </div>

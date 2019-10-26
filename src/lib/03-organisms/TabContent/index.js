@@ -33,12 +33,11 @@ const TabContent = ({
     tabs
 }) => {
     const [activeTab, setActiveTab] = useState(1)
-    console.log(activeTab)
     return (
-        <div className={`tab-content ${additionalClasses.join(" ")}`}>
+        <section className={`tab-content ${additionalClasses.join(" ")}`}>
             <Tabs setActiveTab={ setActiveTab } tabs={ tabs } />
             <Content activeTab={ tabs[tabs.map(tab => tab.key).indexOf(activeTab)] } />
-        </div>
+        </section>
     )
 }
 

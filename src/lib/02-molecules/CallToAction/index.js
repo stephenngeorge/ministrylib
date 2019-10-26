@@ -1,8 +1,6 @@
 /**
  * CALL TO ACTION
  * 
- * @todo refactor this to use classes, not protons...remove protons
- * 
  * CallToAction components are full-width blocks 
  * that contain a title, a body of text and a button
  * 
@@ -13,7 +11,6 @@ import PropTypes from 'prop-types'
 
 import defaults from './defaults'
 
-import { Column, Container } from '../../00-protons'
 import { Button, PlainText, Title } from '../../01-atoms'
 
 const CallToAction = ({
@@ -35,35 +32,31 @@ const CallToAction = ({
     if (buttonElement !== 'a') console.warn(defaults.buttonElement.warning)
 
     return (
-        <section className={`call-to-action ${additionalClasses.join(' ')}`}>
-            <Container fullWidth={true} backgroundColor={backgroundColor}>
-                <Column span={12}>
-                    <div className="call-to-action__text-content">
-                        {
-                            headingText !== defaults.headingText.value &&
-                            <Title  additionalClasses={[`color--dark`]}
-                                    headingId={ headingId }
-                                    headingLevel={ headingLevel }
-                                    headingText={ headingText }
-                            />
-                        }
-                        <PlainText  paragraphId={ paragraphId }
-                                    text={ paragraphText }
-                        />
-                    </div>
+        <section className={`call-to-action container--full-width bg--${backgroundColor} ${additionalClasses.join(' ')}`}>
+            <div className="call-to-action__text-content text-container--very-narrow">
+                {
+                    headingText !== defaults.headingText.value &&
+                    <Title  additionalClasses={[`color--dark`]}
+                            headingId={ headingId }
+                            headingLevel={ headingLevel }
+                            headingText={ headingText }
+                    />
+                }
+                <PlainText  paragraphId={ paragraphId }
+                            text={ paragraphText }
+                />
+            </div>
 
-                    <div className="call-to-action__button-container">
-                        <Button buttonColor={ buttonColor }
-                                buttonText={ buttonText }
-                                buttonElement={ buttonElement }
-                                buttonLink={ buttonLink }
-                                buttonOnClick={ buttonOnClick }
-                                buttonOutline={ buttonOutline }
-                                buttonSize="large"
-                        />
-                    </div>
-                </Column>
-            </Container>
+            <div className="call-to-action__button-container">
+                <Button buttonColor={ buttonColor }
+                        buttonText={ buttonText }
+                        buttonElement={ buttonElement }
+                        buttonLink={ buttonLink }
+                        buttonOnClick={ buttonOnClick }
+                        buttonOutline={ buttonOutline }
+                        buttonSize="large"
+                />
+            </div>
         </section>
     )
 }

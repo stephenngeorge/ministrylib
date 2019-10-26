@@ -1,6 +1,9 @@
 const defaults = {
     additionalClasses: {
         value: []
+    },
+    source: {
+        value: ""
     }
 }
 

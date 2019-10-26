@@ -18,6 +18,8 @@
     padding: 0 2rem;
     z-index: $zindex-foreground + 10;
     box-shadow: $base-shadow;
+
+    transition: height .4s ease;
   }
 
   &__site-logo, &__site-logo > a, &__site-logo > a > img {
@@ -68,6 +70,8 @@
         align-items: center;
       }
 
+      transition: height .4s ease;
+
       a {
         width: 100%;
         padding: 1.4rem 0;
@@ -94,6 +98,8 @@
         &:hover {
           background-color: $color--very-dark;
         }
+
+        transition: height .4s ease;
       }
     }
 
@@ -126,9 +132,4 @@
     left: .4rem;
     }
   }
-}
-
-// should be applied to .main-nav__icons, .main-nav__menu--item, &--item > a
-.small-nav {
-  height: 3.5rem;
 }

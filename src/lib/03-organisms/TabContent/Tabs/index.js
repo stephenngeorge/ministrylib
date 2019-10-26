@@ -1,3 +1,12 @@
+/**
+ * TABS
+ * 
+ * Tabs component is to be used in the TabContent component. It 
+ * renders a list or "menu" of tabulated content and handles the 
+ * active/inactive state of the tabs
+ *  
+ */
+
 import React from 'react'
 import PropTypes from 'prop-types'
 
@@ -8,7 +17,7 @@ const Tabs = ({
     setActiveTab,
     tabs
 }) => {
-    return (
+    return tabs.length > 0 ? (
         <ul className={`tabs ${additionalClasses.join(" ")}`}>
             {
                 tabs.map((tab, i) => (
@@ -21,7 +30,7 @@ const Tabs = ({
                 ))
             }
         </ul>
-    )
+    ) : null
 }
 
 Tabs.propTypes = {

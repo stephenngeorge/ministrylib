@@ -20,12 +20,12 @@ const Title = ({
 }) => {
     if (defaults.headingLevel.range.indexOf(headingLevel) < 0) console.warn(defaults.headingLevel.warning)
     const TitleTag = `h${ headingLevel }`
-    return (
+    return headingText.length > 0 && headingText !== null && headingText !== undefined ? (
         <TitleTag   className={`title ${additionalClasses.join(' ')}`}
                     id={ headingId }>
             { headingText }
         </TitleTag>
-    )
+    ) : null
 }
 
 Title.propTypes = {

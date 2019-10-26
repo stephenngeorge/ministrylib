@@ -7,11 +7,12 @@ import { BrowserRouter as Router } from 'react-router-dom'
 
 import eventData from './event-data'
 
-import { CallToAction, EventsList, HeroImage, HeroText, ImageBlock, Page, PlainText, TabContent, TextLink, QuoteBlock } from './lib'
+import { CallToAction, EventsList, HeroImage, HeroText, ImageBlock, Page, PlainText, QuoteBlock, Testimonial, TextLink } from './lib'
 
 import HeroPortrait from './lib/demo/Rowena_1.jpg'
 import RoPortrait from './lib/demo/ro_BGPortrait.jpg'
 import Site_Logo from './lib/demo/Esther_Logo_Green.jpg'
+import BibleBackground from './lib/demo/bible_background.jpg'
 
 import siteLinks from './link-data'
 
@@ -61,6 +62,10 @@ export default () => (
                                 buttonOutline="dark"
                                 headingText="Find out more"
                 />
+                <QuoteBlock     backgroundImage={ BibleBackground }
+                                quoteText="Who knows if perhaps you were made Queen for such a time as this?"
+                                source="Esther 4:14"
+                />
                 <PlainText      additionalClasses={['text--lead', 'white-space-y', 'text-container--very-narrow']}
                                 text="Rowena serves as Assistant Pastor in charge of Evangelism and Discipleship at St Saviour's Church, Sunbury. She has appeared on UCB, and worked with organisations like TearFund and New Wine."
                                 paragraphId="intro-text"
@@ -82,8 +87,8 @@ export default () => (
                                 linkUrl="/"
                                 variation="internal"
                 />
-                <QuoteBlock     additionalClasses={['bg--main', 'color--light']}
-                                quoteText="This has given me fresh boldness to speak to everyone I know about Jesus"
+                <Testimonial    additionalClasses={['bg--main', 'color--light']}
+                                testimonialText="This has given me fresh boldness to speak to everyone I know about Jesus"
                 />
             </Page>
         </Router>

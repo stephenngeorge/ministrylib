@@ -1,0 +1,115 @@
+/*
+ *  ----------
+ *  CONTAINERS
+ *  ----------
+*/
+.container--full-width {
+    width: 100%;
+    padding: 3rem 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: auto;
+  
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .container {
+    padding: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: auto;
+  
+    display: flex;
+    flex-wrap: wrap;
+      
+    @include set-grid-span(12);
+    @include breakpoint("md") {
+      @include set-grid-span(10);
+    }
+  }
+  
+  
+  %text-container--narrow {
+    margin: 0 auto;
+    @include set-grid-span(10);
+    
+    @include breakpoint("md") {
+      @include set-grid-span(8);
+    }
+  }
+  .text-container--narrow {
+    @extend %text-container--narrow;
+  }
+  
+  %text-container--very-narrow {
+    margin: 0 auto;
+    @include set-grid-span(10);
+    
+    @include breakpoint("md") {
+      @include set-grid-span(8);
+    }
+    @include breakpoint("lg") {
+      @include set-grid-span(6);
+    }
+  }
+  .text-container--very-narrow {
+    @extend %text-container--very-narrow;
+  }
+  
+  /*
+   *  ----------
+   *  SPACING
+   *  ----------
+  */
+  
+  // ------- PADDING
+  
+  %no-padding-x {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .no-padding-x {
+    @extend %no-padding-x;
+  }
+  
+  %no-padding-y {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  .no-padding-y {
+    @extend %no-padding-y;
+  }
+  
+  .no-padding {
+    @extend %no-padding-x;
+    @extend %no-padding-y;
+  }
+  
+  .white-space-y {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+  }
+  
+  // ------- MARGIN
+  
+  %no-margin-x {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .no-margin-x {
+    @extend %no-margin-x;
+  }
+  
+  %no-margin-y {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .no-margin-y {
+    @extend %no-margin-y;
+  }
+  
+  .no-margin {
+    @extend %no-margin-x;
+    @extend %no-margin-y;
+  }
