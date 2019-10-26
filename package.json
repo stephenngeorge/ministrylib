@@ -1,6 +1,6 @@
 {
   "name": "ministrylib",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "dependencies": {
     "eslint": "^6.4.0",
     "node-sass": "^4.12.0",
