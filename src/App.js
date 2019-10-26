@@ -7,7 +7,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 
 import eventData from './event-data'
 
-import { CallToAction, ContactIcons, EventsList, HeroImage, HeroText, ImageBlock, Page, PlainText, QuoteBlock, Testimonial, TextLink } from './lib'
+import { CallToAction, ContactIcons, EventsList, HeroImage, HeroText, ImageBlock, Page, PlainText, ProfilesList, QuoteBlock, Testimonial, TextLink } from './lib'
 
 import HeroPortrait from './lib/demo/Rowena_1.jpg'
 import RoPortrait from './lib/demo/ro_BGPortrait.jpg'
@@ -16,6 +16,10 @@ import BibleBackground from './lib/demo/bible_background.jpg'
 import facebookIcon from './lib/demo/facebook-logo.png'
 import emailIcon from './lib/demo/email-icon.png'
 import instagramIcon from './lib/demo/instagram-logo.png'
+import GenRylett from './lib/demo/GenRylett_portrait.jpg'
+import LouieThorpe from './lib/demo/LouieThorpe_portrait.jpg'
+import SharronCoburn from './lib/demo/sharronCoburn_portrait.jpg'
+import SusiePerkin from './lib/demo/susiePerkin_portrait.jpg'
 
 import siteLinks from './link-data'
 
@@ -65,7 +69,30 @@ export default () => (
                                 buttonOutline="dark"
                                 headingText="Find out more"
                 />
-                <QuoteBlock     backgroundImage={ BibleBackground }
+                <ProfilesList   profiles={[
+                                    {
+                                        name: "Louie Thorpe",
+                                        description: 'Louie is married to Ric and together they church planted to the East End of London before moving to Islington last year for Ric\'s post as Bishop. They have 3 teenagers and a Springer Spaniel, so life if never dull! She\'s been involved in mission all her life and loves to worship and help individuals and couples to flourish. She loves music, dancing and sport of all kinds and walks in the countryside.',
+                                        imageUrl: LouieThorpe
+                                    },
+                                    {
+                                        name: "Sharon Coburn",
+                                        description: "Sharron first entered Christian Ministry at the age of 17 as a youth worker and has always held a passion for people to reach their full potential in God. She is a Parish Priest in a Suffolk Market Town and the Young Vocations Officer in the Diocese of St. Edmundsbury and Ipswich.",
+                                        imageUrl: SharronCoburn
+                                    },
+                                    {
+                                        name: "Susie Perkin",
+                                        description: "Susie is married to Jonathan; they live in Churchdown, Gloucester where Susie works as a nurse and support Jonathan in running St Andrew's Church.",
+                                        imageUrl: SusiePerkin
+                                    },
+                                    {
+                                        name: "Gen Rylett",
+                                        description: "Gen has been married to Adam for 13 years...wife to a student, youth worker and vicar. Same man though!! She has 3 kids, loves Jesus, family, cycling, walks, books and time on her own!",
+                                        imageUrl: GenRylett
+                                    }
+                                ]}
+                />
+                {/* <QuoteBlock     backgroundImage={ BibleBackground }
                                 quoteText="Who knows if perhaps you were made Queen for such a time as this?"
                                 source="Esther 4:14"
                 />
@@ -89,7 +116,7 @@ export default () => (
                                         contactUrl: "https://google.co.uk"
                                     }
                                 ]}
-                />
+                /> */}
                 <PlainText      additionalClasses={['text--lead', 'white-space-y', 'text-container--very-narrow']}
                                 text="Rowena serves as Assistant Pastor in charge of Evangelism and Discipleship at St Saviour's Church, Sunbury. She has appeared on UCB, and worked with organisations like TearFund and New Wine."
                                 paragraphId="intro-text"

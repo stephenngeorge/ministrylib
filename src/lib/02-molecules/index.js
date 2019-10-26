@@ -5,6 +5,7 @@ import Footer from './Footer'
 import HeroImage from './HeroImage'
 import HeroText from './HeroText'
 import MainNav from './MainNav'
+import Profile from './Profile'
 import QuoteBlock from './QuoteBlock'
 import Testimonial from './Testimonial'
 
@@ -16,6 +17,7 @@ export {
     HeroImage,
     HeroText,
     MainNav,
+    Profile,
     QuoteBlock,
     Testimonial
 }

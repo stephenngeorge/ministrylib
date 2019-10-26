@@ -1,0 +1,18 @@
+.profiles-list {
+  padding: 3rem 2rem;
+  list-style-type: none;
+
+  display: flex;
+  flex-direction: column;
+  @include breakpoint("md") {
+    flex-flow: row wrap;
+  }
+
+  li {
+    padding: 0 2rem;
+    width: 100%;
+    @include breakpoint("md") {
+      width: 50%;
+    }
+  }
+}
