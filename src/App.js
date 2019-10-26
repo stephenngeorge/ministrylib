@@ -7,12 +7,15 @@ import { BrowserRouter as Router } from 'react-router-dom'
 
 import eventData from './event-data'
 
-import { CallToAction, EventsList, HeroImage, HeroText, ImageBlock, Page, PlainText, QuoteBlock, Testimonial, TextLink } from './lib'
+import { CallToAction, ContactIcons, EventsList, HeroImage, HeroText, ImageBlock, Page, PlainText, QuoteBlock, Testimonial, TextLink } from './lib'
 
 import HeroPortrait from './lib/demo/Rowena_1.jpg'
 import RoPortrait from './lib/demo/ro_BGPortrait.jpg'
 import Site_Logo from './lib/demo/Esther_Logo_Green.jpg'
 import BibleBackground from './lib/demo/bible_background.jpg'
+import facebookIcon from './lib/demo/facebook-logo.png'
+import emailIcon from './lib/demo/email-icon.png'
+import instagramIcon from './lib/demo/instagram-logo.png'
 
 import siteLinks from './link-data'
 
@@ -65,6 +68,27 @@ export default () => (
                 <QuoteBlock     backgroundImage={ BibleBackground }
                                 quoteText="Who knows if perhaps you were made Queen for such a time as this?"
                                 source="Esther 4:14"
+                />
+                <ContactIcons   additionalClasses={[
+                                    'bg--secondary'
+                                ]}
+                                contactMethods={[
+                                    {
+                                        contactName: "facebook",
+                                        contactIcon: facebookIcon,
+                                        contactUrl: "https://google.co.uk"
+                                    },
+                                    {
+                                        contactName: "email",
+                                        contactIcon: emailIcon,
+                                        contactUrl: "mailto:person@email.co.uk?Subject=Website%20Enquiry"
+                                    },
+                                    {
+                                        contactName: "instagram",
+                                        contactIcon: instagramIcon,
+                                        contactUrl: "https://google.co.uk"
+                                    }
+                                ]}
                 />
                 <PlainText      additionalClasses={['text--lead', 'white-space-y', 'text-container--very-narrow']}
                                 text="Rowena serves as Assistant Pastor in charge of Evangelism and Discipleship at St Saviour's Church, Sunbury. She has appeared on UCB, and worked with organisations like TearFund and New Wine."
