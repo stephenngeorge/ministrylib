@@ -1,5 +1,7 @@
-// setup map for headings sizes, these styles are implemented 
-// in './base.scss', $font-size-base imported from './variables.scss'
+/// setup map for headings sizes, these styles are implemented 
+/// @see './variables.scss'
+/// @type Map
+///
 $font-sizes-headings: (
   "h1": $font-size-base * 2,
   "h2": $font-size-base * 1.8,
@@ -8,47 +10,63 @@ $font-sizes-headings: (
   "h5": $font-size-base * 1.1,
   "h6": $font-size-base * 1
 ) !default;
-// use map $font-sizes-headings to generate classes that can 
-// force font size changes on any element
+
+/// use map $font-sizes-headings to generate classes that can 
+/// force font size changes on any element
+/// @require $font-size-headings
+///
 @each $tag, $size in $font-sizes-headings {
   .text--#{$tag} {
     font-size: $size;
   }
 }
 
+/// @type Map
+///
 $font-sizes-display: (
   "site-title": $font-size-base * 3,
   "page-title": $font-size-base * 2.4
 ) !default;
-// use map $font-sizes-display to generate classes that can 
-// force font size changes on any element
+
+/// use map $font-sizes-display to generate classes that can 
+/// force font size changes on any element
+/// @require $font-sizes-display
+///
 @each $name, $size in $font-sizes-display {
   .text--#{$name} {
     font-size: $size;
   }
 }
 
-// $font-size-lead imported from './variables.scss'
+/// @see './variables.scss'
+/// @require $font-sizes
+///
 @each $size, $value in $font-sizes {
   .text--#{$size} {
     font-size: $value;
   }
 }
 
-// map $font-families imported from './variables.scss
+/// @require './variables.scss
+///
 @each $family, $name in $font-families {
   .font-family--#{$family} {
     font-family: $name;
   }
 }
 
-// map $font-weights imported from './variables.scss'
+/// @see './variables.scss'
+/// @require $font-weights
+///
 @each $weight, $value in $font-weights {
   .font-weight--#{$weight} {
     font-weight: $value;
   }
 }
 
+/// @see './variables.scss'
+/// @require $theme-colors
+///
 @each $color, $hex in $theme-colors {
   .title__padded-text--#{$color} {
     @include padded-text($hex, .6, 1, 1.6);

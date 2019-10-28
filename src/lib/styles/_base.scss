@@ -22,13 +22,18 @@ section, div {
 HEADINGS
 ----------
 ******  */
-// map $font-sizes-headings imported from './typography.scss'
+/// @require $font-sizes-headings
+/// @see './typography.scss'
+///
 @each $tag, $size in $font-sizes-headings {
   #{$tag} {
     font-size: $size;
   }
 }
-// $font-familt-serif imported from './variables.scss'
+
+/// @require $font-familt-serif
+/// @see './variables.scss'
+///
 h1, h2,
 h3, h4,
 h5, h6 {
@@ -40,7 +45,9 @@ h5, h6 {
 OTHER TEXT
 ----------
 ******  */
-// $font-size-base, $font-family-sans-serif imported from './variables.scss'
+/// @require $font-size-base, @require $font-family-sans-serif
+/// @see './variables.scss'
+///
 p {
   font-size: $font-size-base;
   font-family: $font-family-sans-serif;

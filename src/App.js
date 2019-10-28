@@ -38,7 +38,7 @@ export default () => (
                                 animate="onScroll"
                 />
                 <HeroText       bodyText="Esther Ministry is an international mission to see people equipped, empowered and released into their true calling. Esther Minsitry was founded by Rowena Cross: a speaker, church leader and evangelist with a passion to release people into their gifting and set them on fire for God."
-                                headingText="Esther Ministry"
+                                headingText="esther ministry"
                 />
                 {/* <TabContent     tabs={[
                                     {
@@ -69,7 +69,7 @@ export default () => (
                                 buttonOutline="dark"
                                 headingText="Find out more"
                 />
-                <ProfilesList   profiles={[
+                {/* <ProfilesList   profiles={[
                                     {
                                         name: "Louie Thorpe",
                                         description: 'Louie is married to Ric and together they church planted to the East End of London before moving to Islington last year for Ric\'s post as Bishop. They have 3 teenagers and a Springer Spaniel, so life if never dull! She\'s been involved in mission all her life and loves to worship and help individuals and couples to flourish. She loves music, dancing and sport of all kinds and walks in the countryside.',
@@ -91,7 +91,7 @@ export default () => (
                                         imageUrl: GenRylett
                                     }
                                 ]}
-                />
+                /> */}
                 {/* <QuoteBlock     backgroundImage={ BibleBackground }
                                 quoteText="Who knows if perhaps you were made Queen for such a time as this?"
                                 source="Esther 4:14"
