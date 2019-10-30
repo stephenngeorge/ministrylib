@@ -38,7 +38,7 @@ const HeroText = ({
             <div className="content">
                 <Title  headingLevel={ 1 }
                         headingText={ headingText }
-                        additionalClasses={['text--site-title', 'font-weight--heavy', 'title__padded-text--main', 'color--light']}
+                        additionalClasses={['text--site-title', 'font-weight--light', 'title__padded-text--main', 'color--light']}
                 />
                 <PlainText  additionalClasses={['text--lead', 'font-weight--light']}
                             text={ bodyText }
