@@ -1,0 +1,18 @@
+.content-box {
+    width: 100%;
+    max-width: map-get($breakpoints, "xl");
+}
+
+.content-box.margin {
+    margin: 0 auto !important;
+}
+
+.content-box.flex {
+    align-self: center !important;
+}
+
+.content-box.position {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}

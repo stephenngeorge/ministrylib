@@ -97,6 +97,8 @@ SHADOWS
 ******  */
 /// @type String
 $base-shadow:               0 0 6px 0 $black-50;
+/// @type String
+$shadow-right:              5px 5px 6px 0 $black-50;
 
 /*  ******
 ----------
@@ -112,12 +114,15 @@ $breakpoint-sm:             576px !default;
 $breakpoint-md:             767px !default;
 /// @type Number
 $breakpoint-lg:             992px !default;
+/// @type Number
+$breakpoint-xl:             1248px !default;
 
 /// @type Map
 $breakpoints: (
   "sm": $breakpoint-sm,
   "md": $breakpoint-md,
-  "lg": $breakpoint-lg
+  "lg": $breakpoint-lg,
+  "xl": $breakpoint-xl
 ) !default;
 
 // ------- ZINDEX

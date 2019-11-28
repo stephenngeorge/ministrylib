@@ -29,7 +29,7 @@
   %button--color-#{$color} {
     background-color: $hex;
       &:hover {
-        background-color: darken($hex, 15%);
+        background-color: darken($hex, 15%) !important;
       }
     }
     .button--color-#{$color} {

@@ -21,6 +21,7 @@ import PropTypes from 'prop-types'
 
 import defaults from './defaults'
 
+import { ContentBox } from '../../01-atoms'
 import { Profile } from '../../02-molecules'
 
 const ProfilesList = ({
@@ -28,15 +29,17 @@ const ProfilesList = ({
     profiles
 }) => {
     return (
-        <ul className={`profiles-list ${additionalClasses.join(" ")}`}>
-            {
-                profiles.map((profile, i) => (
-                    <li key={ i }>
-                        <Profile profile={ profile } />
-                    </li>
-                ))
-            }
-        </ul>
+        <ContentBox>
+            <ul className={`profiles-list ${additionalClasses.join(" ")}`}>
+                {
+                    profiles.map((profile, i) => (
+                        <li key={ i }>
+                            <Profile profile={ profile } />
+                        </li>
+                    ))
+                }
+            </ul>
+        </ContentBox>
     )
 }
 

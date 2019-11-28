@@ -29,29 +29,42 @@ import defaults from './defaults'
 
 import Controls from './Controls'
 import Month from './Month'
-import { Title } from '../../01-atoms'
+import { ContentBox, Title } from '../../01-atoms'
 
 const EventsList = ({
     additionalClasses,
-    data
+    data,
+    noEventsMessage
 }) => {
     const [monthIndex, setMonthIndex] = useState(0)
-    return (
+    return !!data.length ? (
         <section className={`events-list ${additionalClasses.join(" ")}`}>
-            <Title headingLevel={2} headingText="Upcoming Events" />
-            <Controls months={ data.map(event => event.month) } setMonthIndex={setMonthIndex} />
-            <Month month={data[monthIndex]} />
+            <ContentBox>
+                <Title headingLevel={2} headingText="Upcoming Events" />
+                <Controls months={ data.map(event => event.month) } setMonthIndex={setMonthIndex} />
+                <Month month={data[monthIndex]} />
+            </ContentBox>
+        </section>
+    ) : (
+        <section className={`events-list events-list--empty ${additionalClasses.join(" ")}`}>
+            <ContentBox>
+                <Title headingLevel={2} headingText="Upcoming Events" />
+                <p>{ noEventsMessage }</p>
+            </ContentBox>
         </section>
     )
 }
 
 EventsList.propTypes = {
     additionalClasses: PropTypes.array,
-    data: PropTypes.array.isRequired
+    data: PropTypes.array.isRequired,
+    noEventsMessage: PropTypes.string
 }
 
 EventsList.defaultProps = {
-    additionalClasses: defaults.additionalClasses.value
+    additionalClasses: defaults.additionalClasses.value,
+    data: defaults.data.value,
+    noEventsMessage: defaults.noEventsMessage.value
 }
 
 export default EventsList

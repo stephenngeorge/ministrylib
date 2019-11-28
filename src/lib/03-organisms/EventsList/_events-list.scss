@@ -8,4 +8,16 @@
     color: $color--light;
     margin-bottom: 2rem;
   }
+
+  &--empty {
+    p {
+      @include set-grid-span(6);
+      margin: 0 auto;
+      
+      text-align: center;
+      font-size: $font-size-lead;
+      font-weight: $font-weight-light;
+      color: $color--light;
+    }
+  }
 }

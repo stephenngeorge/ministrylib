@@ -15,7 +15,7 @@ import PropTypes from 'prop-types'
 
 import defaults from './defaults'
 
-import { CoverImage, PlainText, TextLink } from '../../01-atoms'
+import { ContentBox, CoverImage, PlainText, TextLink } from '../../01-atoms'
 
 const QuoteBlock = ({
     additionalClasses,
@@ -52,18 +52,20 @@ const QuoteBlock = ({
             <CoverImage     additionalClasses={['quote-background']}
                             altText="bible background"
                             imageUrl={ backgroundImage } />
-            <div className="quote-block__text-content">
-                <PlainText  additionalClasses={["font-family--cursive", "quote-text"]}
-                            text={ quoteText }
-                />
-                <PlainText  additionalClasses={["source-text"]}
-                            text={ source }
-                />
-                <TextLink   linkText={ citation }
-                            linkUrl={ citationUrl }
-                            variation="external"
-                />
-            </div>
+            <ContentBox centreWith="position">
+                <div className="quote-block__text-content">
+                    <PlainText  additionalClasses={["font-family--cursive", "quote-text"]}
+                                text={ quoteText }
+                    />
+                    <PlainText  additionalClasses={["source-text"]}
+                                text={ source }
+                    />
+                    <TextLink   linkText={ citation }
+                                linkUrl={ citationUrl }
+                                variation="external"
+                    />
+                </div>
+            </ContentBox>
         </section>
     )
 }

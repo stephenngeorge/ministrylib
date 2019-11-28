@@ -12,7 +12,7 @@ import PropTypes from 'prop-types'
 
 import defaults from './defaults'
 
-import { Title, PlainText } from '../../01-atoms'
+import { ContentBox, PlainText, Title } from '../../01-atoms'
 
 const HeroText = ({
     additionalClasses,
@@ -35,15 +35,17 @@ const HeroText = ({
 
     return (
         <div className={`hero-textBlock ${additionalClasses.join(' ')}`}>
-            <div className="content">
-                <Title  headingLevel={ 1 }
-                        headingText={ headingText }
-                        additionalClasses={['text--site-title', 'font-weight--light', 'title__padded-text--main', 'color--light']}
-                />
-                <PlainText  additionalClasses={['text--lead', 'font-weight--light']}
-                            text={ bodyText }
-                />
-            </div>
+            <ContentBox>
+                <div className="content">
+                    <Title  headingLevel={ 1 }
+                            headingText={ headingText }
+                            additionalClasses={['text--site-title', 'font-weight--light', 'title__padded-text--main', 'color--light']}
+                    />
+                    <PlainText  additionalClasses={['text--lead', 'font-weight--light']}
+                                text={ bodyText }
+                    />
+                </div>
+            </ContentBox>
         </div>
     )
 }

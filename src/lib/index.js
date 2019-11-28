@@ -2,6 +2,7 @@ import './app.scss'
 
 import {
     Button,
+    ContentBox,
     CoverImage,
     PlainText,
     TextLink,
@@ -32,6 +33,7 @@ export {
     Button,
     CallToAction,
     ContactIcons,
+    ContentBox,
     CoverImage,
     Event,
     EventsList,

@@ -15,6 +15,7 @@
   }
   
   .container {
+    max-width: map-get($map: $breakpoints, $key: "xl");
     padding: 2rem;
     margin-left: auto;
     margin-right: auto;
@@ -112,4 +113,45 @@
   .no-margin {
     @extend %no-margin-x;
     @extend %no-margin-y;
+  }
+
+  /*
+   *  ----------
+   *  ALIGNMENT
+   *  ----------
+  */
+  
+  .children--justify-start {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .children--justify-centre, .children--justify-center {
+    display: flex;
+    justify-content: center;
+  }
+
+  .children--justify-end {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .children--align-start {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .children--align-centre, .children--align-center {
+    display: flex;
+    align-items: center;
+  }
+
+  .children--align-end {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .children--align-stretch {
+    display: flex;
+    align-items: stretch;
   }

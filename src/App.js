@@ -7,7 +7,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 
 import eventData from './event-data'
 
-import { CallToAction, ContactIcons, EventsList, HeroImage, HeroText, ImageBlock, Page, PlainText, ProfilesList, QuoteBlock, Testimonial, TextLink } from './lib'
+import { CallToAction, ContactIcons, EventsList, HeroImage, HeroText, ImageBlock, Page, PlainText, ProfilesList, QuoteBlock, Testimonial, TextLink, ContentBox } from './lib'
 
 import HeroPortrait from './demo/Rowena_1.jpg'
 import RoPortrait from './demo/ro_BGPortrait.jpg'
@@ -69,7 +69,7 @@ export default () => (
                                 buttonOutline="dark"
                                 headingText="Find out more"
                 />
-                {/* <ProfilesList   profiles={[
+                <ProfilesList   profiles={[
                                     {
                                         name: "Louie Thorpe",
                                         description: 'Louie is married to Ric and together they church planted to the East End of London before moving to Islington last year for Ric\'s post as Bishop. They have 3 teenagers and a Springer Spaniel, so life if never dull! She\'s been involved in mission all her life and loves to worship and help individuals and couples to flourish. She loves music, dancing and sport of all kinds and walks in the countryside.',
@@ -91,8 +91,8 @@ export default () => (
                                         imageUrl: GenRylett
                                     }
                                 ]}
-                /> */}
-                {/* <QuoteBlock     backgroundImage={ BibleBackground }
+                />
+                <QuoteBlock     backgroundImage={ BibleBackground }
                                 quoteText="Who knows if perhaps you were made Queen for such a time as this?"
                                 source="Esther 4:14"
                 />
@@ -116,13 +116,15 @@ export default () => (
                                         contactUrl: "https://google.co.uk"
                                     }
                                 ]}
-                /> */}
-                <PlainText      additionalClasses={['text--lead', 'white-space-y', 'text-container--very-narrow']}
-                                text="Rowena serves as Assistant Pastor in charge of Evangelism and Discipleship at St Saviour's Church, Sunbury. She has appeared on UCB, and worked with organisations like TearFund and New Wine."
-                                paragraphId="intro-text"
                 />
+                <ContentBox>
+                    <PlainText      additionalClasses={['text--lead', 'white-space-y', 'text-container--very-narrow']}
+                                    text="Rowena serves as Assistant Pastor in charge of Evangelism and Discipleship at St Saviour's Church, Sunbury. She has appeared on UCB, and worked with organisations like TearFund and New Wine."
+                                    paragraphId="intro-text"
+                    />
+                </ContentBox>
                 <EventsList     additionalClasses={['bg--secondary']}
-                                data={ eventData }
+                                // data={ eventData }
                 />
                 <TextLink       linkText="see full calendar"
                                 linkUrl="/"

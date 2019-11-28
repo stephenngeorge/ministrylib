@@ -1,16 +1,21 @@
 .main-nav {
   @include set-grid-span(12);
   position: fixed;
+  height: 5rem;
   top: 0;
   left: 0;
   z-index: $zindex-foreground;
   background-color: $color--dark;
 
-  &__icons {
+  .content-box {
+    position: relative;
+  }
+
+  &__top-bar {
     @include set-grid-span(12);
     display: flex;
     align-items: center;
-    position: absolute;
+    position: relative;
     top: 0;
     height: 5rem;
     justify-content: space-between;
@@ -51,16 +56,17 @@
 
   &__menu {
     z-index: $zindex-foreground - 10;
-    position: absolute;
-    top: -12rem;
+    position: relative;
+    transform: translateY(-100%);
     @include set-grid-span(12);
     display: flex;
     flex-flow: row wrap;
     background-color: $color--dark;
 
-    transition: top .4s ease-out;
+    transition: transform .4s ease-out;
 
     &--item {
+      border: 1px solid $color--dark;
       @include set-grid-span(12);
 
       @include breakpoint("lg") {
@@ -84,8 +90,6 @@
         font-weight: $font-weight-light;
         text-transform: uppercase;
 
-        transition: background-color .4s;
-
         @include breakpoint("lg") {
           font-size: $font-size-base;
           height: 5rem;
@@ -98,11 +102,13 @@
           background-color: $color--very-dark;
         }
 
-        transition: height .4s ease;
+        transition: height .4s ease, background-color .4s;
       }
     }
 
     @include breakpoint("lg") {
+      position: absolute;
+      transform: translateY(0);
       top: 0;
       right: 0;
       z-index: $zindex-foreground + 20;
@@ -114,21 +120,21 @@
 }
 
 .in-view {
-  top: 5rem;
+  transform: translateY(0);
 }
 
 .icon-transform {
   .main-nav__menu-icon--bar {
     &:nth-child(1) {
-    transform-origin: left top;
-    transform: rotate(45deg);
-    left: .4rem;
+      transform-origin: left top;
+      transform: rotate(45deg);
+      left: .4rem;
     }
 
     &:nth-last-child(1) {
-    transform-origin: left bottom;
-    transform: rotate(-45deg);
-    left: .4rem;
+      transform-origin: left bottom;
+      transform: rotate(-45deg);
+      left: .4rem;
     }
   }
 }

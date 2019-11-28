@@ -12,7 +12,7 @@ import PropTypes from 'prop-types'
 
 import defaults from './defaults'
 
-import { PlainText } from '../../01-atoms'
+import { ContentBox, PlainText } from '../../01-atoms'
 
 const Testimonial = ({
     additionalClasses,
@@ -21,12 +21,14 @@ const Testimonial = ({
 }) => {
     return (
         <section className={`testimonial container--full-width ${additionalClasses.join(" ")}`}>
-            <PlainText  additionalClasses={['font-family--cursive', 'container', 'no-padding']}
-                        text={ testimonialText }
-            />
-            <PlainText  additionalClasses={['source-text', 'container', 'no-padding', 'color--dark']}
-                        text={ source }
-            />
+            <ContentBox>
+                <PlainText  additionalClasses={['font-family--cursive', 'container', 'no-padding']}
+                            text={ testimonialText }
+                />
+                <PlainText  additionalClasses={['source-text', 'container', 'no-padding', 'color--dark']}
+                            text={ source }
+                />
+            </ContentBox>
         </section>
     )
 }

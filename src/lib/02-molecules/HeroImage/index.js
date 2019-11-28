@@ -40,6 +40,7 @@ const HeroImage = ({
                 image.style.filter = `saturate(${saturation}%)`
                 setScroll(window.scrollY)
             }
+            animateImageScale()
             document.addEventListener('scroll', animateImageScale)
          
             return () => {

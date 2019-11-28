@@ -18,6 +18,8 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
+import { ContentBox } from '../../01-atoms'
+
 const MainNav = ({
     menuItems,
     siteLogo
@@ -44,32 +46,34 @@ const MainNav = ({
 
     return (
         <nav className="main-nav">
-            <div className="main-nav__icons">
-                <div className="main-nav__site-logo">
-                    {   !!siteLogo &&
-                        <Link to="/">
-                            <img alt="esther ministry logo" src={ siteLogo } />
-                        </Link>
+            <ContentBox>
+                <div className="main-nav__top-bar">
+                    <div className="main-nav__site-logo">
+                        {   !!siteLogo &&
+                            <Link to="/">
+                                <img alt="esther ministry logo" src={ siteLogo } />
+                            </Link>
+                        }
+                    </div>
+
+                    <div className="main-nav__menu-icon">
+                        <div className="main-nav__menu-icon--bar"></div>
+                        <div className="main-nav__menu-icon--bar"></div>
+                    </div>
+                </div>
+
+                <ul className="main-nav__menu">
+                    {   menuItems.length > 0 &&
+                        menuItems.map((item, i) => {
+                            return (
+                                <li key={ i } className="main-nav__menu--item">
+                                    <Link to={item.url}>{ item.text }</Link>
+                                </li>
+                            )
+                        })
                     }
-                </div>
-
-                <div className="main-nav__menu-icon">
-                    <div className="main-nav__menu-icon--bar"></div>
-                    <div className="main-nav__menu-icon--bar"></div>
-                </div>
-            </div>
-
-            <ul className="main-nav__menu">
-                {   menuItems.length > 0 &&
-                    menuItems.map((item, i) => {
-                        return (
-                            <li key={ i } className="main-nav__menu--item">
-                                <Link to={item.url}>{ item.text }</Link>
-                            </li>
-                        )
-                    })
-                }
-            </ul>
+                </ul>
+            </ContentBox>
         </nav>
     )
 }
