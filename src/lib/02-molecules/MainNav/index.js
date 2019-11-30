@@ -45,6 +45,7 @@ const MainNav = ({
     }, [])
 
     const closeMenu = () => {
+        window.scrollTo(0, 0)
         const navMenu = document.querySelector('.main-nav__menu')
         const menuIcon = document.querySelector('.main-nav__menu-icon')
 
