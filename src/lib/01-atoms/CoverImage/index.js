@@ -27,6 +27,7 @@ const CoverImage = ({
             <img    src={ imageUrl }
                     alt={ altText }
                     id={ imageId }
+                    data-object-fit="cover"
             />
         </div>
     ) : null
