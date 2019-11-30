@@ -228,7 +228,8 @@ Displays a list of events with controls to scroll from one month to the next.
 Contains 'Controls' and 'Month' components.
 ```
 props: {
-    data: array [required]
+    data: array [required],
+    noEventsMessage: string
 }
 ```
 Each item in the data array should be an object of shape:

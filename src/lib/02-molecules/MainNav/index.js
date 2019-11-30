@@ -44,6 +44,13 @@ const MainNav = ({
         return () => menuIcon.removeEventListener('click', toggleNav)
     }, [])
 
+    const closeMenu = () => {
+        const navMenu = document.querySelector('.main-nav__menu')
+        const menuIcon = document.querySelector('.main-nav__menu-icon')
+
+        navMenu.classList.remove('in-view')
+        menuIcon.classList.remove('icon-transform')
+    }
     return (
         <nav className="main-nav">
             <ContentBox>
@@ -51,7 +58,7 @@ const MainNav = ({
                     <div className="main-nav__site-logo">
                         {   !!siteLogo &&
                             <Link to="/">
-                                <img alt="esther ministry logo" src={ siteLogo } />
+                                <img onClick={closeMenu} alt="esther ministry logo" src={ siteLogo } />
                             </Link>
                         }
                     </div>
@@ -66,8 +73,8 @@ const MainNav = ({
                     {   menuItems.length > 0 &&
                         menuItems.map((item, i) => {
                             return (
-                                <li key={ i } className="main-nav__menu--item">
-                                    <Link to={item.url}>{ item.text }</Link>
+                                <li onClick={closeMenu} key={ i } className="main-nav__menu--item">
+                                    <Link to={ item.url }>{ item.text }</Link>
                                 </li>
                             )
                         })
