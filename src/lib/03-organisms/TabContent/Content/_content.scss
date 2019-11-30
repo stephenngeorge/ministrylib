@@ -1,12 +1,16 @@
 .tab-contents {
   @include set-grid-span(12);
-  padding: 2rem 0;
+  @include breakpoint("lg") {
+    @include set-grid-span(6);
+    margin: 2rem auto;
+    border: 2px solid $color--dark;
+    box-shadow: $shadow-bottom;
+  }
+  padding: 2rem;
 
   &__lead-paragraph, &__supporting-paragraph {
     color: $color--light;
     padding-bottom: 1rem;
-
-    @extend %text-container--very-narrow;
   }
 
   &__lead-paragraph {

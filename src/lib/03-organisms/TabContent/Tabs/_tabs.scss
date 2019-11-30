@@ -4,7 +4,7 @@
 
   @include breakpoint("lg") {
     @include set-grid-span(6);
-    margin: 0 auto 1rem;
+    margin: 0 auto;
     justify-content: space-between;
   }
 

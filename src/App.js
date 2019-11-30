@@ -7,7 +7,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 
 import eventData from './event-data'
 
-import { CallToAction, ContactIcons, EventsList, HeroImage, HeroText, ImageBlock, Page, PlainText, ProfilesList, QuoteBlock, Testimonial, TextLink, ContentBox } from './lib'
+import { CallToAction, ContactIcons, EventsList, HeroImage, HeroText, ImageBlock, Page, PlainText, ProfilesList, QuoteBlock, TabContent, Testimonial, TextLink, ContentBox } from './lib'
 
 import HeroPortrait from './demo/Rowena_1.jpg'
 import RoPortrait from './demo/ro_BGPortrait.jpg'
@@ -40,7 +40,7 @@ export default () => (
                 <HeroText       bodyText="Esther Ministry is an international mission to see people equipped, empowered and released into their true calling. Esther Minsitry was founded by Rowena Cross: a speaker, church leader and evangelist with a passion to release people into their gifting and set them on fire for God."
                                 headingText="esther ministry"
                 />
-                {/* <TabContent     tabs={[
+                <TabContent     tabs={[
                                     {
                                         color: 'main',
                                         key: 1,
@@ -60,7 +60,7 @@ export default () => (
                                         }
                                     }
                                 ]}
-                /> */}
+                />
                 <CallToAction   paragraphText="Enquire about booking a course, find out more about Rowena and Esther Ministry"
                                 backgroundColor="main"
                                 buttonLink="#"

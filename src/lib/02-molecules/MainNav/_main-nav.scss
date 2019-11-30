@@ -6,6 +6,7 @@
   left: 0;
   z-index: $zindex-foreground;
   background-color: $color--dark;
+  box-shadow: $shadow-bottom;
 
   .content-box {
     position: relative;
