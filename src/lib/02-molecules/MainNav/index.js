@@ -28,9 +28,11 @@ const MainNav = ({
     useEffect(() => {
         const menuIcon = document.querySelector('.main-nav__menu-icon')
         const navMenu = document.querySelector('.main-nav__menu')
+        const contentBox = document.querySelector('.content-box.nav-box')
         
         const toggleNav = () => {
             navMenu.classList.toggle('in-view')
+            contentBox.classList.toggle('in-view')
             menuIcon.classList.toggle('icon-transform')
         }
 
@@ -48,13 +50,15 @@ const MainNav = ({
         window.scrollTo(0, 0)
         const navMenu = document.querySelector('.main-nav__menu')
         const menuIcon = document.querySelector('.main-nav__menu-icon')
+        const contentBox = document.querySelector('.content-box.nav-box')
 
         navMenu.classList.remove('in-view')
+        contentBox.classList.remove('in-view')
         menuIcon.classList.remove('icon-transform')
     }
     return (
         <nav className="main-nav">
-            <ContentBox>
+            <ContentBox additionalClasses={['nav-box']}>
                 <div className="main-nav__top-bar">
                     <div className="main-nav__site-logo">
                         {   !!siteLogo &&

@@ -10,6 +10,13 @@
 
   .content-box {
     position: relative;
+    height: 5rem;
+    transition: height .4s ease-out;
+    background: none;
+  }
+  .content-box.in-view {
+    height: 100rem;
+    background-color: rgba(0, 0, 0, .6);
   }
 
   &__top-bar {
@@ -56,13 +63,18 @@
   }
 
   &__menu {
-    z-index: $zindex-foreground - 10;
+    z-index: $zindex-behind;
     position: relative;
     transform: translateY(-100%);
     @include set-grid-span(12);
     display: flex;
     flex-flow: row wrap;
     background-color: $color--dark;
+    box-shadow: $shadow-bottom;
+
+    @include breakpoint("lg") {
+      box-shadow: none;
+    }
 
     transition: transform .4s ease-out;
 
@@ -121,6 +133,7 @@
 }
 
 .in-view {
+  z-index: $zindex-foreground - 10;
   transform: translateY(0);
 }
 
