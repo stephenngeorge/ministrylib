@@ -1,6 +1,6 @@
 {
   "name": "ministrylib",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "dependencies": {
     "loriss": "^3.1.2",
     "object-fit-polyfill": "^0.1.0",
