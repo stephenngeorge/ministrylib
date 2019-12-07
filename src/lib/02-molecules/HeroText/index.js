@@ -21,11 +21,14 @@ const HeroText = ({
 }) => {
     useEffect(() => {
         const positionText = () => {
-            const titleHeight = Math.floor(document.querySelector('.text--site-title').offsetHeight)
-            const textBlock = document.querySelector('.hero-textBlock')
-            const yOffset = Math.ceil(-titleHeight / 2)
-    
-            textBlock.style.marginTop = `${yOffset}px`
+            const title = document.querySelector('.text--site-title')
+            if (title !== null & title !== undefined) {
+                const titleHeight = Math.floor(title.offsetHeight)
+                const textBlock = document.querySelector('.hero-textBlock')
+                const yOffset = Math.ceil(-titleHeight / 2)
+        
+                textBlock.style.marginTop = `${yOffset}px`
+            }
         }
         positionText()
         window.addEventListener('resize', positionText)

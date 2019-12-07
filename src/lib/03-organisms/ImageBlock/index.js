@@ -33,10 +33,13 @@ const ImageBlock = ({
             const textBlock = document.querySelector('.image-block__text-content')
 
             if (window.innerWidth < 992) {
-                const titleHeight = Math.floor(document.querySelector('#that-esther-moment').offsetHeight)
-                const yOffset = Math.ceil(-titleHeight / 2)
-    
-                textBlock.style.marginTop = `${yOffset}px`
+                const title = document.querySelector('#that-esther-moment')
+                if (title !== null && title !== undefined) {
+                    const titleHeight = Math.floor(title.offsetHeight)
+                    const yOffset = Math.ceil(-titleHeight / 2)
+        
+                    textBlock.style.marginTop = `${yOffset}px`
+                }
             }
             else {
                 textBlock.style.marginTop = '0px'
