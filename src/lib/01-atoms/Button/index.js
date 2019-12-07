@@ -10,6 +10,7 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
 import defaults from './defaults'
 
@@ -20,6 +21,7 @@ const Button = ({
     buttonElement,
     buttonId,
     buttonLink,
+    buttonLinkType,
     buttonOnClick,
     buttonOutline,
     buttonSize,
@@ -34,6 +36,9 @@ const Button = ({
     }
     if (defaults.buttonOutline.range.indexOf(buttonOutline) < 0) {
         console.warn(defaults.buttonOutline.warning)
+    }
+    if (defaults.buttonLinkType.range.indexOf(buttonLinkType) < 0) {
+        console.warn(defaults.buttonLinkType.warning)
     }
 
     // set button classes based on props
@@ -65,11 +70,18 @@ const Button = ({
     // set that attribute
     const attribs = {
         id: buttonId.length > 0 ? buttonId : null,
-        href: link,
+        href: buttonLinkType === 'external' ? link : null,
         onClick: handleClick
     }
 
     const HTMLTag = buttonElement.trim()
+    if (HTMLTag === "a" && buttonLinkType === 'internal') {
+        return (
+            <Link className={classes} {...attribs} to={buttonLink}>
+                { buttonText }
+            </Link>
+        )
+    }
     return (
         <HTMLTag {...attribs} className={classes}>
             { buttonText }
@@ -84,6 +96,7 @@ Button.propTypes = {
     buttonElement: PropTypes.string,
     buttonId: PropTypes.string,
     buttonLink: PropTypes.string,
+    buttonLinkType: PropTypes.string,
     buttonOnClick: PropTypes.func,
     buttonOutline: PropTypes.string,
     buttonSize: PropTypes.string,
@@ -97,6 +110,7 @@ Button.defaultProps = {
     buttonElement: defaults.buttonElement.value,
     buttonId: defaults.buttonId.value,
     buttonLink: defaults.buttonLink.value,
+    buttonLinkType: defaults.buttonLinkType.value,
     buttonOnClick: defaults.buttonOnClick.value,
     buttonOutline: defaults.buttonOutline.value,
     buttonSize: defaults.buttonSize.value

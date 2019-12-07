@@ -19,6 +19,7 @@ const CallToAction = ({
     buttonColor,
     buttonElement,
     buttonLink,
+    buttonLinkType,
     buttonOnClick,
     buttonOutline,
     buttonText,
@@ -52,6 +53,7 @@ const CallToAction = ({
                         buttonText={ buttonText }
                         buttonElement={ buttonElement }
                         buttonLink={ buttonLink }
+                        buttonLinkType={ buttonLinkType }
                         buttonOnClick={ buttonOnClick }
                         buttonOutline={ buttonOutline }
                         buttonSize="large"
@@ -72,6 +74,7 @@ CallToAction.propTypes = {
     buttonColor: PropTypes.string,
     buttonElement: PropTypes.string,
     buttonLink: PropTypes.string,
+    buttonLinkType: PropTypes.string,
     buttonOnClick: PropTypes.func,
     buttonOutline: PropTypes.string,
     buttonText: PropTypes.string.isRequired,
@@ -86,6 +89,7 @@ CallToAction.defaultProps = {
     additionalClasses: defaults.additionalClasses.value,
     buttonColor: defaults.buttonColor.value,
     buttonElement: defaults.buttonElement.value,
+    buttonLinkType: defaults.buttonLinkType.value,
     buttonOutline: defaults.buttonOutline.value,
     headingId: defaults.headingId.value,
     headingLevel: defaults.headingLevel.value,

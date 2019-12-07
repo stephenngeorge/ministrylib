@@ -15,6 +15,9 @@ const defaults = {
     buttonOutline: {
         value: 'light'
     },
+    buttonLinkType: {
+        value: 'internal'
+    },
     headingId: {
         value: ''
     },

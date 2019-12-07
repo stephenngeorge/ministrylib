@@ -20,6 +20,11 @@ const defaults = {
         value: null,
         warning: 'You set the button element as "<a>" but did not provide a link for the href, please pass one as a string to the "buttonLink" prop'
     },
+    buttonLinkType: {
+        value: 'internal',
+        range: ['internal', 'external'],
+        warning: 'you must pass either "internal" or "external" to the buttonLinkType prop'
+    },
     buttonOnClick: {
         value: null,
         warning: 'You set the button element as "<button>" but did not provide a function to handle the click, please pass one to the "buttonOnClick" prop'
