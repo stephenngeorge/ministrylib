@@ -6,7 +6,7 @@
  * 
  */
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 
 import defaults from './defaults'
@@ -29,6 +29,17 @@ const CallToAction = ({
     paragraphId,
     paragraphText
 }) => {
+    useEffect(() => {
+        const ctaButton = document.querySelector('.call-to-action__button-container a')
+        function scrollToTop() {
+            window.scrollTo(0, 0)
+        }
+        if (ctaButton !== null && ctaButton !== undefined) {
+            ctaButton.addEventListener('click', scrollToTop)
+        }
+
+        return () => ctaButton.removeEventListener('click', scrollToTop)
+    }, [])
     // warn about defaults
     if (buttonElement !== 'a') console.warn(defaults.buttonElement.warning)
 
