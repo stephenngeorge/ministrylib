@@ -3,6 +3,7 @@
   "version": "1.2.3",
   "dependencies": {
     "@babel/preset-env": "^7.7.6",
+    "@babel/preset-react": "^7.7.4",
     "fibers": "^4.0.2",
     "loriss": "^3.1.4",
     "object-fit-polyfill": "^0.1.0",
@@ -12,7 +13,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --presets=@babel/preset-env --copy-files --ignore __tests__,spec.js,test.js,__snapshots__",
+    "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --presets=@babel/preset-env,@babel/preset-react --copy-files --ignore __tests__,spec.js,test.js,__snapshots__",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy": "npm run build && npm publish"
