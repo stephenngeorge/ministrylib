@@ -4,6 +4,7 @@ import Event from './Event'
 import Footer from './Footer'
 import HeroImage from './HeroImage'
 import HeroText from './HeroText'
+import ImageRow from './ImageRow'
 import MainNav from './MainNav'
 import Profile from './Profile'
 import QuoteBlock from './QuoteBlock'
@@ -16,6 +17,7 @@ export {
     Footer,
     HeroImage,
     HeroText,
+    ImageRow,
     MainNav,
     Profile,
     QuoteBlock,

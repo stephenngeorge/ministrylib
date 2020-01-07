@@ -7,7 +7,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 
 import eventData from './event-data'
 
-import { CallToAction, ContactIcons, EventsList, HeroImage, HeroText, ImageBlock, Page, PlainText, ProfilesList, QuoteBlock, TabContent, Testimonial, TextLink, ContentBox } from './lib'
+import { CallToAction, ContactIcons, EventsList, HeroImage, HeroText, ImageBlock, ImageRow, Page, PlainText, ProfilesList, QuoteBlock, TabContent, Testimonial, TextLink, ContentBox } from './lib'
 
 import HeroPortrait from './demo/Rowena_1.jpg'
 import RoPortrait from './demo/ro_BGPortrait.jpg'
@@ -20,6 +20,9 @@ import GenRylett from './demo/GenRylett_portrait.jpg'
 import LouieThorpe from './demo/LouieThorpe_portrait.jpg'
 import SharronCoburn from './demo/sharronCoburn_portrait.jpg'
 import SusiePerkin from './demo/susiePerkin_portrait.jpg'
+import RoCloseUp from './demo/ro_close_up.jpg'
+import RoSpeaking from './demo/ro_speaking.jpg'
+import RoKempton from './demo/ro_at_kempton.jpg'
 
 import siteLinks from './link-data'
 
@@ -39,6 +42,21 @@ export default () => (
                 />
                 <HeroText       bodyText="Esther Ministry is an international mission to see people equipped, empowered and released into their true calling. Esther Minsitry was founded by Rowena Cross: a speaker, church leader and evangelist with a passion to release people into their gifting and set them on fire for God."
                                 headingText="esther ministry long title wraps"
+                />
+                <ImageRow       images={[
+                                  {
+                                    name: "rowena speaking",
+                                    url: RoSpeaking
+                                  },
+                                  {
+                                    name: "rowena close up",
+                                    url: RoCloseUp
+                                  },
+                                  {
+                                    name: "rowena at kempton",
+                                    url: RoKempton
+                                  }
+                                ]}
                 />
                 <TabContent     tabs={[
                                     {
