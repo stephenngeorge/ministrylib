@@ -173,6 +173,19 @@ props: {
 }
 ```
 
+#### Image Row
+3 images displayed in a row, scrollable on small screens.
+```
+props: {
+  images
+}
+```
+Each item in the images array should be an object of shape:
+```
+name: string,
+url: string (filepath)
+```
+
 #### Main Nav
 The main site navigation, displayed at the top of every page.
 ```
