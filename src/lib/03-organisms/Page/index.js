@@ -14,6 +14,7 @@ import { Footer, MainNav } from '../../02-molecules'
 const Page = ({
     children,
     footerAffiliation,
+    footerAffiliationMessage,
     footerAffiliationUrl,
     navLinks,
     navLogo
@@ -24,6 +25,7 @@ const Page = ({
                         menuItems={ navLinks } />
             { children }
             <Footer     affiliation={ footerAffiliation }
+                        affiliationMessage={ footerAffiliationMessage }
                         affiliationUrl={ footerAffiliationUrl }
                         siteMapLinks={ navLinks }
             />
@@ -33,6 +35,7 @@ const Page = ({
 
 Page.propTypes = {
     footerAffiliation: PropTypes.string,
+    footerAffiliationMessage: PropTypes.string,
     footerAffiliationUrl: PropTypes.string,
     navLinks: PropTypes.array.isRequired,
     navLogo: PropTypes.string

@@ -18,17 +18,21 @@ import { ContentBox } from '../../01-atoms'
 
 const Footer = ({
     affiliation,
+    affiliationMessage,
     affiliationUrl,
     siteMapLinks
 }) => {
     return (
         <footer className="footer container--full-width">
             <ContentBox>
+              {
+                !!affiliation &&
                 <div className="footer__affiliation">
-                    <p>Esther Ministry is proud to support the</p>
+                    <p>{ affiliationMessage }</p>
                     <Link to={ affiliationUrl }>{ affiliation }</Link>
                 </div>
-                <SiteMap links={ siteMapLinks } />
+              }
+              <SiteMap links={ siteMapLinks } />
             </ContentBox>
         </footer>
     )
@@ -36,6 +40,7 @@ const Footer = ({
 
 Footer.propTypes = {
     affiliation: PropTypes.string,
+    affiliationMessage: PropTypes.string,
     affiliationUrl: PropTypes.string,
     siteMapLinks: PropTypes.array
 }
