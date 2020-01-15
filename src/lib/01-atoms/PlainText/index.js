@@ -13,22 +13,29 @@ import defaults from './defaults'
 
 const PlainText = ({
     additionalClasses,
+    children,
     paragraphId,
     text
 }) => {
-    return text.length > 0 && text !== null && text !== undefined ? (
-        <p  className={`plain-text ${additionalClasses.join(' ')}`}
+    return !!children ? (
+      <div  className={`plain-text ${additionalClasses.join(" ")}`}
             id={ paragraphId }
-        >
-            { text }
-        </p>
-    ) : null
+      >
+        { children }
+      </div>
+    ) : (
+      <p  className={`plain-text ${additionalClasses.join(' ')}`}
+          id={ paragraphId }
+      >
+        { text }
+      </p>
+    )
 }
 
 PlainText.propTypes = {
     additionalClasses: PropTypes.array,
     paragraphId: PropTypes.string,
-    text: PropTypes.string.isRequired
+    text: PropTypes.string
 }
 
 PlainText.defaultProps = {

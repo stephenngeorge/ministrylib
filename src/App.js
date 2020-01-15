@@ -138,9 +138,10 @@ export default () => (
                 />
                 <ContentBox>
                     <PlainText      additionalClasses={['text--lead', 'white-space-y', 'text-container--very-narrow']}
-                                    text="Rowena serves as Assistant Pastor in charge of Evangelism and Discipleship at St Saviour's Church, Sunbury. She has appeared on UCB, and worked with organisations like TearFund and New Wine."
                                     paragraphId="intro-text"
-                    />
+                    >
+                      <a href="#">lorem ipsum</a>
+                    </PlainText>
                 </ContentBox>
                 <EventsList     additionalClasses={['bg--secondary']}
                                 // data={ eventData }
