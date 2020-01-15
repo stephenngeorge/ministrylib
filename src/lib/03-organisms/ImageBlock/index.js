@@ -32,17 +32,19 @@ const ImageBlock = ({
         const positionText = () => {
             const textBlock = document.querySelector('.image-block__text-content')
 
-            if (window.innerWidth < 992) {
-                const title = document.querySelector('#that-esther-moment')
-                if (title !== null && title !== undefined) {
-                    const titleHeight = Math.floor(title.offsetHeight)
-                    const yOffset = Math.ceil(-titleHeight / 2)
-        
-                    textBlock.style.marginTop = `${yOffset}px`
-                }
-            }
-            else {
-                textBlock.style.marginTop = '0px'
+            if (textBlock !== null && textBlock !== undefined) {
+              if (window.innerWidth < 992) {
+                  const title = document.querySelector('#that-esther-moment')
+                  if (title !== null && title !== undefined) {
+                      const titleHeight = Math.floor(title.offsetHeight)
+                      const yOffset = Math.ceil(-titleHeight / 2)
+          
+                      textBlock.style.marginTop = `${yOffset}px`
+                  }
+              }
+              else {
+                  textBlock.style.marginTop = '0px'
+              }
             }
         }
         /**
@@ -52,11 +54,13 @@ const ImageBlock = ({
             const imageContent = document.querySelector('.image-block__image-content')
             const textBlock = document.querySelector('.image-block__text-content')
 
-            if (window.innerWidth >= 992) {
-                imageContent.style.height = `${textBlock.offsetHeight}px`
-            }
-            else {
-                imageContent.style.height = '18rem'
+            if (imageContent !== null && imageContent !== undefined && textBlock !== null && textBlock !== undefined) {
+              if (window.innerWidth >= 992) {
+                  imageContent.style.height = `${textBlock.offsetHeight}px`
+              }
+              else {
+                  imageContent.style.height = '18rem'
+              }
             }
         }
 

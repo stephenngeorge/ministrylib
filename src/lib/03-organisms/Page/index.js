@@ -6,7 +6,7 @@
  * 
 */
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 
 import { Footer, MainNav } from '../../02-molecules'
@@ -19,6 +19,23 @@ const Page = ({
     navLinks,
     navLogo
 }) => {
+    useEffect(() => {
+      const positionFooter = () => {
+        const footer = document.querySelector('.footer')
+        const page = document.querySelector('.page')
+        if (footer !== null && footer !== undefined) {
+          page.style.paddingBottom = `${footer.clientHeight}px`
+        }
+      }
+
+      positionFooter()
+      window.addEventListener('resize', positionFooter)
+
+      return () => {
+        window.removeEventListener('resize', positionFooter)
+      }
+    }, [])
+
     return (
         <div className="page">
             <MainNav    siteLogo={ navLogo }

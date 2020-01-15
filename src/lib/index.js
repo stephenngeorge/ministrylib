@@ -4,6 +4,7 @@ import {
     Button,
     ContentBox,
     CoverImage,
+    Image,
     PlainText,
     TextLink,
     Title
@@ -40,6 +41,7 @@ export {
     EventsList,
     HeroImage,
     HeroText,
+    Image,
     ImageBlock,
     ImageRow,
     MainNav,

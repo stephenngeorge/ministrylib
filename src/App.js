@@ -7,7 +7,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 
 import eventData from './event-data'
 
-import { CallToAction, ContactIcons, EventsList, HeroImage, HeroText, ImageBlock, ImageRow, Page, PlainText, ProfilesList, QuoteBlock, TabContent, Testimonial, TextLink, ContentBox } from './lib'
+import { CallToAction, ContactIcons, EventsList, HeroImage, HeroText, Image, ImageBlock, ImageRow, Page, PlainText, ProfilesList, QuoteBlock, TabContent, Testimonial, TextLink, ContentBox } from './lib'
 
 import HeroPortrait from './demo/Rowena_1.jpg'
 import RoPortrait from './demo/ro_BGPortrait.jpg'
@@ -79,6 +79,7 @@ export default () => (
                                     }
                                 ]}
                 />
+                <Image imageUrl={ RoPortrait } imageAltText="rowena portrait" />
                 <CallToAction   paragraphText="Enquire about booking a course, find out more about Rowena and Esther Ministry"
                                 backgroundColor="main"
                                 buttonLink="#"
