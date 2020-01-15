@@ -1,6 +1,12 @@
 .plain-text {
   line-height: 1.4;
 
+  // These styles when children are rendering instead of
+  // text prop
+  p {
+    font-size: inherit;
+  }
+
   a {
     color: $color--complementary;
     font-size: inherit;

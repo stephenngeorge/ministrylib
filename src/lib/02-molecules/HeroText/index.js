@@ -17,6 +17,7 @@ import { ContentBox, PlainText, Title } from '../../01-atoms'
 const HeroText = ({
     additionalClasses,
     bodyText,
+    children,
     headingText
 }) => {
     useEffect(() => {
@@ -46,7 +47,9 @@ const HeroText = ({
                     />
                     <PlainText  additionalClasses={['text--lead', 'font-weight--light']}
                                 text={ bodyText }
-                    />
+                    >
+                      { children }
+                    </PlainText>
                 </div>
             </ContentBox>
         </div>

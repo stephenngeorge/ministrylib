@@ -40,9 +40,15 @@ export default () => (
                                 altText="rowena portrait"
                                 animate="onScroll"
                 />
-                <HeroText       bodyText="Esther Ministry is an international mission to see people equipped, empowered and released into their true calling. Esther Minsitry was founded by Rowena Cross: a speaker, church leader and evangelist with a passion to release people into their gifting and set them on fire for God."
-                                headingText="esther ministry long title wraps"
-                />
+                <HeroText headingText="esther ministry long title wraps">
+                  <p>
+                    Esther Ministry is an international mission to see people equipped, 
+                    empowered and released into their true calling. Esther Minsitry was 
+                    founded by Rowena Cross: an <a href="https://archbishops-evangelists.uk/">Archbishop's Evangelist</a>, speaker, church leader and evangelist 
+                    with a passion to release people into their gifting and set them on 
+                    fire for God.
+                  </p>
+                </HeroText>
                 <ImageRow       images={[
                                   {
                                     name: "rowena speaking",
