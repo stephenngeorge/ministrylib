@@ -1,11 +1,7 @@
 /**
- * COVER IMAGE
+ * IMAGE
  * 
- * CoverImage component displays an image from a given source
- * in a container div. It is full-width and uses object-fit
- * to ensure that the image always fills the container
- * 
- * @todo install and import object-fit polyfill
+ * Image components render an image wthin a container
  * 
  */
 
@@ -16,7 +12,7 @@ import defaults from './defaults'
 
 import ContentBox from '../ContentBox'
 
-const CoverImage = ({
+const Image = ({
     additionalClasses,
     altText,
     imageUrl
@@ -36,15 +32,15 @@ const CoverImage = ({
     ) : null
 }
 
-CoverImage.propTypes = {
+Image.propTypes = {
     additionalClasses: PropTypes.array,
     altText: PropTypes.string,
     imageUrl: PropTypes.string.isRequired,
 }
 
-CoverImage.defaultProps = {
+Image.defaultProps = {
     additionalClasses: defaults.additionalClasses.value,
     altText: defaults.altText.value,
 }
 
-export default CoverImage
+export default Image
