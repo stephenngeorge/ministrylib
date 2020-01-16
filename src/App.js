@@ -70,8 +70,8 @@ export default () => (
                                         key: 1,
                                         tabText: "Gifting Day",
                                         tabContent: {
-                                            leadParagraph: "Esther Ministry is delivered as either a short course (3 evening sessions) or a one-day course, including prayer and interactive sessions.",
-                                            supportingParagraph: "This includes a gifting questionnaire, results and an action plan. Participants are guided through exercises to help them discover their gifts. Everyone is encouraged to leave the day with a specific plan of how these gifts will be put into action. As well as delivering this course in churches and schools, Esther Ministry is also delivered to groups of staff at Tearfund as part of their building confidence course."
+                                            leadParagraph: "<p>Esther Ministry is delivered as either a short course (3 evening sessions) or a one-day course, including prayer and interactive sessions.</p>",
+                                            supportingParagraph: "<p>This includes a gifting questionnaire, results and an action plan. Participants are guided through exercises to help them discover their gifts. Everyone is encouraged to leave the day with a specific plan of how these gifts will be put into action. As well as delivering this course in churches and schools, Esther Ministry is also delivered to groups of staff at Tearfund as part of their building confidence course.</p>"
                                         }
                                     },
                                     {

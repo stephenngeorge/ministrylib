@@ -22,10 +22,14 @@ const Content = ({
         <div className={`tab-contents ${additionalClasses.join(" ")} bg--${activeTab.color}` }>
             <PlainText  additionalClasses={['tab-contents__lead-paragraph']}
                         text={ activeTab.tabContent.leadParagraph }
-            />
+            >
+              { <div dangerouslySetInnerHTML={{__html: activeTab.tabContent.leadParagraph}} /> }
+            </PlainText>
             <PlainText  additionalClasses={['tab-contents__supporting-paragraph']}
                         text={ activeTab.tabContent.supportingParagraph }
-            />
+            >
+              { <div dangerouslySetInnerHTML={{__html: activeTab.tabContent.supportingParagraph}} /> }
+            </PlainText>
         </div>
     )
 }
