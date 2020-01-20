@@ -38,7 +38,6 @@ export default () => (
                                 divHeight={60}
                                 additionalClasses={['animate']}
                                 altText="rowena portrait"
-                                animate="onScroll"
                 />
                 <HeroText headingText="esther ministry long title wraps">
                   <p>
