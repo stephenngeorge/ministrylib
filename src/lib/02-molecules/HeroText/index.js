@@ -58,7 +58,7 @@ const HeroText = ({
 
 HeroText.propTypes = {
     additionalClasses: PropTypes.array,
-    bodyText: PropTypes.string.isRequired,
+    bodyText: PropTypes.string,
     headingText: PropTypes.string,
 }
 

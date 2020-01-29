@@ -10,7 +10,8 @@
  * ..{
  * ....name: string,
  * ....description: string,
- * ....imageUrl: string
+ * ....imageUrl: string,
+ * ....testimonialText: string
  * ..}
  * ]
  * 

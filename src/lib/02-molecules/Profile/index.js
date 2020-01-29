@@ -10,7 +10,8 @@
  * {
  * ..name: string,
  * ..description: string,
- * ..imageUrl: string
+ * ..imageUrl: string,
+ * ..testimonialText: string
  * }
  * 
 */
@@ -37,6 +38,10 @@ const Profile = ({
                 <PlainText  additionalClasses={['color--dark']}
                             text={ profile.description }
                 />
+                {
+                  profile.testimonialText &&
+                  <p className="font-family--cursive endorsement">{ profile.testimonialText }</p>
+                }
             </div>
         </div>
     )

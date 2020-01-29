@@ -25,9 +25,12 @@ const Testimonial = ({
                 <PlainText  additionalClasses={['font-family--cursive', 'container', 'no-padding']}
                             text={ testimonialText }
                 />
-                <PlainText  additionalClasses={['source-text', 'container', 'no-padding', 'color--dark']}
-                            text={ source }
-                />
+                {
+                  source &&
+                  <PlainText  additionalClasses={['source-text', 'container', 'no-padding', 'color--dark']}
+                              text={ source }
+                  />
+                }
             </ContentBox>
         </section>
     )

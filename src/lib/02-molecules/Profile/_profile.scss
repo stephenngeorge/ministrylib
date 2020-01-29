@@ -1,17 +1,32 @@
 .profile {
+  display: flex;
+  flex-direction: column;
+  @include breakpoint("md") {
+    flex-direction: row;
+  }
   margin-bottom: 2rem;
   width: 100%;
 
   img {
-    width: 70%;
+    width: 12rem;
+    height: 12rem;
     margin-bottom: 1rem;
 
+    border-radius: 50%;
     box-shadow: $shadow-right;
   }
 
   &__text-content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
     .title {
       margin-bottom: .5rem;
+    }
+
+    .endorsement {
+      margin-top: 1rem;
+      font-size: 1.6rem;
     }
   }
 }

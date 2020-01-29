@@ -96,8 +96,9 @@ export default () => (
                 <ProfilesList   profiles={[
                                     {
                                         name: "Louie Thorpe",
-                                        description: 'Louie is married to Ric and together they church planted to the East End of London before moving to Islington last year for Ric\'s post as Bishop. They have 3 teenagers and a Springer Spaniel, so life if never dull! She\'s been involved in mission all her life and loves to worship and help individuals and couples to flourish. She loves music, dancing and sport of all kinds and walks in the countryside.',
-                                        imageUrl: LouieThorpe
+                                        description: 'Louie is married to Ric and together they church planted to the East End of London before moving to Islington for Ric\'s post as Bishop for Church Planting. They have 3 children and an ageing Springer Spaniel, and life is never dull!  She\'s been involved in mission all her life and loves to worship and help individuals and couples to flourish. She loves music, dance and sport of all kinds and walks in the countryside.',
+                                        imageUrl: LouieThorpe,
+                                        testimonialText: "Rowena is a great speaker, full of energy, honesty and fun!  She is absolutely passionate about sharing the Gospel of Jesus Christ and it's impact on our lives, and is encouraging and effective in equipping individuals and the church to be all we should be."
                                     },
                                     {
                                         name: "Sharon Coburn",
